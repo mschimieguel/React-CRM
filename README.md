@@ -48,3 +48,7 @@ E as branchs serão divididas entre Front e Back como são aplicações independ
 4. Como usuário, quero ter mais informações sobre um Lead.
 5. Como usuário, quero um login utilizando minha conta do Google.
 6. Como usuário quero fazer buscas avançadas (com filtros - X,Y,Z).
+
+### Backlog Sprint 1
+
+Histórias: 0, 1, 2
