@@ -1,4 +1,4 @@
-Aplicativo CRM simples escrito com React.
+### Aplicativo CRM simples escrito com React.
 
 #### Recursos:
 - Autenticação com Firebase Authentication
