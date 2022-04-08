@@ -18,8 +18,8 @@
 
 
 #### Tecnologias:
-* **Back-end**: React
-* **Front-end**: Fire-Base
+* **Back-end**: Fire-Base
+* **Front-end**: React
 * **DataBase**: SQL
 
 
