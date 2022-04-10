@@ -8,13 +8,14 @@
 - Adicionar e armazenar informações sobre clientes, contatos e negócios
 
 #### Prerequisites:
-- Node.JS installed 10.0 >
+- Node.JS installed 16.0 ou superior
 
 #### Time:
 * Back-end / Front-end / Infra:
     * Breno de Castro Pimenta
-    * Klysman Rezende
+    * Klysman Rezende Alves
     * Matheus Schimieguel Silva
+    * Rodrigo Cézar Luz Brochado
 
 
 #### Tecnologias:
