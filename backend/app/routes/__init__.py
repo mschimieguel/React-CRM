@@ -1,0 +1,1 @@
+# Definition of every route by blueprints
