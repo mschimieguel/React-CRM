@@ -28,13 +28,13 @@
 ### Backlog do Produto - CRM
 
 1. Como usuário, quero ver todos os Leads.
-   - [ ] Estruturar o flask (Breno)
+   - [x] Estruturar o flask (Breno)
    - [ ] Adicionar SQLite (Rodrigo)
-   - [ ] Conteinerização do flask (Breno)
+   - [x] Conteinerização do flask (Breno)
    - [ ] Estruturar Lead no banco (Rodrigo)
-   - [ ] Criar app do React (Matheus)
-   - [ ] Definir a estrutura do Lead (Klysman)
-   - [ ] Definir a estrutura do Board de Negócios (Klysman)
+   - [x] Criar app do React (Matheus)
+   - [x] Definir a estrutura do Lead (Klysman)
+   - [x] Definir a estrutura do Board de Negócios (Klysman)
    - [ ] Construir layout inicial do Board no Figma (Klysman e Matheus)
    - [ ] Popular o banco com o Pyfake (Breno)
 
