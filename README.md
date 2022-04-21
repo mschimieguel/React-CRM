@@ -1,14 +1,14 @@
 ### Aplicativo CRM simples escrito com React.
 
 #### Recursos:
-- Autenticação com Firebase Authentication
 - Armazenamento de dados persistente com o banco de dados
-- Gerenciamento de estado com Redux
+- Git e Github
 - CI/CD com Github Actions
-- Adicionar e armazenar informações sobre clientes, contatos e negócios
+- Adicionar e armazenar informações sobre os clientes, contatos e negócios (Leads).
 
 #### Prerequisites:
-- Node.JS installed 16.0 ou superior
+- Node.JS installed 16.0  ou superior
+- Python 3.8 ou superior
 
 #### Time:
 * Back-end / Front-end / Infra:
@@ -19,23 +19,36 @@
 
 
 #### Tecnologias:
-* **Back-end**: Fire-Base
+* **Back-end**: Flask
 * **Front-end**: React
-* **DataBase**: SQL
-
+* **DataBase**: SQL-Lite
 
 ---
 
+### Backlog do Produto - CRM
 
-### Backlog do Sistema - CRM
+1. Como usuário, quero ver todos os Leads.
+   - [ ] Estruturar o flask (Breno)
+   - [ ] Adicionar SQLite (Rodrigo)
+   - [ ] Conteinerização do flask (Breno)
+   - [ ] Estruturar Lead no banco (Rodrigo)
+   - [ ] Criar app do React (Matheus)
+   - [ ] Definir a estrutura do Lead (Klysman)
+   - [ ] Definir a estrutura do Board de Negócios (Klysman)
+   - [ ] Construir layout inicial do Board no Figma (Klysman e Matheus)
+   - [ ] Popular o banco com o Pyfake (Breno)
 
-1. Como usuário, quero acrescentar um Lead.
-2. Como usuário, quero acrescentar informações do Lead.
-3. Como usuário, quero escolher a visualização dos resultados em tabela.
-4. Como usuário, quero ter mais informações sobre um Lead.
-5. Como usuário, quero um login utilizando minha conta do Google.
-6. Como usuário quero fazer buscas avançadas (com filtros - X,Y,Z).
+2. Como usuário, quero editar um Lead.
+   - [ ] Criar componente para adição do Lead (Matheus)
+   - [ ] Criar componente para edição do Lead (Klysman)
+   - [ ] Criar endpoint para adição do Lead (Rodrigo)
+   - [ ] Criar endpoint para update do Lead (Breno)
 
-### Backlog Sprint 1
+3. Como usuário, quero converter um Lead para Negócios.
+   - [ ] Estruturação de negócios no banco (Rodrigo)
+   - [ ] Criar componente para adição do Lead (Matheus)
+   - [ ] Criar componente para edição do Lead (Klysman)
+   - [ ] Organização dos cards no Board (Matheus)
+   - [ ] Criar endpoint para adição do Lead (Rodrigo)
+   - [ ] Criar endpoint para update do Lead (Breno)
 
-Histórias: 0, 1, 2
