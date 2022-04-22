@@ -7,9 +7,9 @@ $ docker build -t simple-flask-app:latest .
 ```
 2. Execute o contêiner:
 ```bash
-$ docker run -it -p 5000:5000 simple-flask-app
+$ docker run -it -p 7776:7776 simple-flask-app
 ```
-3. Acesse http:127.0.0.1:5000 para visualizar a aplicação executando localmente.
+3. Acesse http:127.0.0.1:7776 para visualizar a aplicação executando localmente.
 
 <br>
 
