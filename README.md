@@ -35,7 +35,7 @@
    - [x] Criar app do React (Matheus)
    - [x] Definir a estrutura do Lead (Klysman)
    - [x] Definir a estrutura do Board de Negócios (Klysman)
-   - [ ] Construir layout inicial do Board no Figma (Klysman e Matheus)
+   - [x] Construir layout inicial do Board no Adobe XD (Klysman)
    - [ ] Popular o banco com o Pyfake (Breno)
 
 2. Como usuário, quero editar um Lead.
