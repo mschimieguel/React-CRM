@@ -55,6 +55,57 @@ def create_lead():
     status_code = 200
     return jsonify(response), status_code
 
+@lead.route('/lead/update/', methods=['POST'])
+def update_lead():
+    """Update post lead"""
+    id = request.form['id']
+    nome = request.form['nome']
+    email = request.form['email']
+    telefone = request.form['telefone']
+    tipo = request.form['tipo']
+    etapa = request.form['etapa']
+    data = request.form['data']
+    expectativa = request.form['expectativa']
+
+    lead_obj = models.Lead.query.filter_by(id=id).first()
+
+    setattr(lead_obj, 'nome', nome)
+    setattr(lead_obj, 'email', email)
+    setattr(lead_obj, 'telefone', telefone)
+    setattr(lead_obj, 'tipo', tipo)
+    setattr(lead_obj, 'etapa', int(etapa))
+    setattr(lead_obj, 'data', data)
+    setattr(lead_obj, 'expectativa', expectativa)
+
+    db.session.commit()
+    response = {
+        'success': True,
+    }
+    status_code = 200
+    return jsonify(response), status_code
+
+@lead.route('/lead/update_column/', methods=['POST'])
+def update_lead_column():
+    """Update post lead column"""
+    id = request.form['id']
+    key = request.form['key']
+    value = request.form['value']
+
+    lead_obj = models.Lead.query.filter_by(id=id).first()
+
+    if key == "etapa":
+        value = int(value)
+
+    setattr(lead_obj, key, value)
+
+    db.session.commit()
+    response = {
+        'success': True,
+    }
+    status_code = 200
+    return jsonify(response), status_code
+
+
 
 @lead.route('/lead/<nome>', methods=['GET'])
 def create_get_lead(nome):
@@ -64,6 +115,24 @@ def create_get_lead(nome):
     )
 
     db.session.add(lead_obj)
+    db.session.commit()
+    response = {
+        'success': True,
+    }
+    status_code = 200
+    return jsonify(response), status_code
+
+@lead.route('/lead/update/<id>/<key>/<value>', methods=['GET'])
+def update_get_lead_column(id, key, value):
+    """Update get lead column"""
+
+    lead_obj = models.Lead.query.filter_by(id=id).first()
+
+    if key == "etapa":
+        value = int(value)
+
+    setattr(lead_obj, key, value)
+
     db.session.commit()
     response = {
         'success': True,
