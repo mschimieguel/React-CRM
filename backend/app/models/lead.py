@@ -6,14 +6,11 @@ class Lead(db.Model):
     __tablename__ = 'lead'  # Real table name, since is case sensitive
 
     id = db.Column(db.Integer, primary_key=True)
-    
     nome = db.Column(db.String, nullable=False)
-
     email = db.Column(db.String, nullable=True)
-    telefone = db.Column(db.String, nullable=True)    
+    telefone = db.Column(db.String, nullable=True)
     tipo = db.Column(db.String, nullable=True)
     etapa = db.Column(db.Integer, nullable=True)
-    
     data = db.Column(db.DateTime, nullable=True)
     expectativa = db.Column(db.DateTime, nullable=True)
 
