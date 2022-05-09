@@ -1,26 +1,14 @@
 # Application entry point
-import os
+from re import L
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from flask_cors import CORS
+from app.data.database import configure_database, populate_database
 
 # Globally accessible libraries
 db = SQLAlchemy() 
 ma = Marshmallow()
-
-
-def configure_database(app):
-    """Manages database connection inside a context"""
-
-    @app.before_first_request
-    def initialize_database():
-        db.create_all()  # Create sql tables for our data models
-
-    @app.teardown_request
-    def shutdown_session(exception=None):
-        db.session.remove()
-
 
 # Application Factory App
 def create_app() -> Flask:
@@ -33,7 +21,8 @@ def create_app() -> Flask:
     CORS(app) # This will enable CORS for all routes
 
     with app.app_context():
-        configure_database(app)
+        configure_database(app, db)
+        populate_database(db)
 
         # Include our Routes in our context
         from app.routes import lead, fake_lead

@@ -14,7 +14,16 @@ class Lead(db.Model):
     data = db.Column(db.DateTime, nullable=True)
     expectativa = db.Column(db.DateTime, nullable=True)
 
-    def __init__(self, nome, email=None, telefone=None, tipo=None, etapa=None, data=None, expectativa=None) -> None:
+    def __init__(
+                self,
+                nome,
+                email=None,
+                telefone=None,
+                tipo=None,
+                etapa=None,
+                data=None,
+                expectativa=None
+            ):
         """Constructor to help write data"""
 
         self.nome = nome
