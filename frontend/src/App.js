@@ -1,6 +1,8 @@
 import './App.css';
 import Column from './components/Column';
 import SlideBar from './components/SlideBar';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
@@ -10,8 +12,7 @@ function App() {
       <Column/>
       <Column/>
       <Column/>
-      <Column/>
-      <Column/>
+      <Footer/>
     </div>
   );
 }
