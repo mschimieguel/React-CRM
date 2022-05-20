@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Container, Routes, Route, Link} from 'react-router-dom'
 /* 
 import BasicModal from './components/BasicModal';
 import BasicList from './components/BasicList';
@@ -12,29 +12,20 @@ import Overview from './pages/Overview';
 
 function App() {
   return (
-    <Router>
+    <Container>
+    <Routes>
       
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/overview">Overview</Link>
-        </li>
-      </ul>
-
-{/*         <Route exact path="./pages/">
+        <Route exact path="./pages/">
           <Home />
         </Route>
-
+        
         <Route exact path="./pages/Overview">
           <Overview />
-        </Route> */}
+        </Route>
 
+    </Routes>
+    </Container>
 
-
-    </Router>
-    
 
   );
 }
