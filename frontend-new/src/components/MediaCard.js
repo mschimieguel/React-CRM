@@ -8,11 +8,11 @@ import Typography from '@mui/material/Typography';
 
 export default function MediaCard() {
   return (
-    <Card sx={{ maxWidth: 345, boxShadow: 24, }}>
+    <Card sx={{ maxWidth: 345, boxShadow: 24, marginTop: 2 }}>
       <CardMedia
         component="img"
         height="140"
-        image="./static/rashed-alakroka-cc.jpg"
+        image="../static/rashed-alakroka-cc.jpg"
         alt="green iguana"
       />
       <CardContent>
