@@ -8,6 +8,8 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import ImageAvatars from './ImageAvatars';
+import ContainedButtons from './ContainedButtons';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -64,6 +66,7 @@ export default function SearchAppBar() {
             sx={{ mr: 2 }}
           >
             <MenuIcon />
+            
           </IconButton>
           <Typography
             variant="h6"
@@ -73,6 +76,7 @@ export default function SearchAppBar() {
           >
             CRM KIOJIN 
           </Typography>
+          <ContainedButtons />
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -82,6 +86,7 @@ export default function SearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+          <ImageAvatars />
         </Toolbar>
       </AppBar>
     </Box>

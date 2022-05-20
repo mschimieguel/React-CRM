@@ -23,7 +23,12 @@ function App() {
           <div> 
 
             {/* <Link to='/'>Home</Link>
-            <Link to='/Overview'>Overview</Link> */}
+            <Link to='/Overview'>Overview</Link> 
+              <Routes>
+                <Route exact path='/' element={<Home />} />
+                <Route exact path='/Overview' element={<Overview />} />
+              </Routes>
+            */}
 
 
             <SearchAppBar /> {/* menu horizontal superior */}
@@ -31,11 +36,6 @@ function App() {
 
           </div>
 
-        {/*   <Routes>
-            <Route exact path='/' element={<Home />} />
-            <Route exact path='/Overview' element={<Overview />} />
-          </Routes>
-        */}
         </Router>
 
 
