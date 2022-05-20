@@ -2,6 +2,9 @@ import * as React from 'react';
 
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 
+import IconLabelTabs from './components/IconLabelTabs';
+import VerticalTabs from './components/VerticalTabs';
+
 /* 
 import BasicModal from './components/BasicModal';
 import BasicList from './components/BasicList';
@@ -20,6 +23,8 @@ function App() {
 
             <Link to='/'>Home</Link>
             <Link to='/Overview'>Overview</Link>
+            <IconLabelTabs />
+            <VerticalTabs />
 
           </div>
 
