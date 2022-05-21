@@ -3,8 +3,10 @@ from app import db
 from app import models
 from app.serializers import LeadSchema
 
+from datetime import datetime
 from flask import Blueprint, jsonify, request
 from json import dumps as jsondump
+import json
 
 lead = Blueprint('lead', __name__)
 
@@ -26,16 +28,22 @@ def retrieve_all_leads():
     result = models.Lead.query.all()
     return LeadSchema(many=True).jsonify(result), 200
 
+def js_to_py_datetime(str_datetime: str):
+    str_datetime = str_datetime.replace('.000Z', '')
+    return datetime.strptime(str_datetime, '%Y-%m-%dT%H:%M:%S')
+
 @lead.route('/lead/', methods=['POST'])
 def create_lead():
     """Create post lead"""
-    nome = request.form['nome']
-    email = request.form['email']
-    telefone = request.form['telefone']
-    tipo = request.form['tipo']
-    etapa = request.form['etapa']
-    data = request.form['data']
-    expectativa = request.form['expectativa']
+    response_data = json.loads(request.data.decode())
+
+    nome = response_data['nome']
+    email = response_data['email']
+    telefone = response_data['telefone']
+    tipo = response_data['tipo']
+    etapa = response_data['etapa']
+    data = js_to_py_datetime(response_data['data'])
+    expectativa = js_to_py_datetime(response_data['expectativa'])
 
     lead_obj = models.Lead(
         nome = nome,

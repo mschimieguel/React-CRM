@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import Form from "./Form";
 import "./BasicModal.css";
+import FormAdd from "./FormAdd";
 
 const style = {
   position: "absolute",
@@ -57,8 +58,11 @@ export default function BasicModal(props) {
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
           </Typography>
-
-          <Form
+          
+          <FormAdd />
+        
+        {/*
+         <Form
             ClassName="Form"
             key={props.id}
             nome={props.nome}
@@ -69,9 +73,7 @@ export default function BasicModal(props) {
             data={props.data}
             dataFinal={props.dataFinal}
             onSaveChagedLead = {saveChangedLeadHandler}
-          />
-
-          
+      />*/}
         </Box>
       </Modal>
     </div>
