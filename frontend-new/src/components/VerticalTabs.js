@@ -11,6 +11,12 @@ import Empresas from "../pages/Empresas";
 import Pessoas from "../pages/Pessoas";
 import Calendar from "../pages/Calendar";
 
+import HomeIcon from '@mui/icons-material/Home';
+import BackupTableIcon from '@mui/icons-material/BackupTable';
+import RecentActorsIcon from '@mui/icons-material/RecentActors';
+import BusinessIcon from '@mui/icons-material/Business';
+import PeopleIcon from '@mui/icons-material/People';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 import MediaCard from "./MediaCard";
 
@@ -73,12 +79,13 @@ export default function VerticalTabs(props) {
         aria-label="Vertical tabs example"
         sx={{ borderRight: 1, borderColor: "divider" }}
       >
-        <Tab label="HOME" {...a11yProps(0)} />
-        <Tab label="OVERVIEW" {...a11yProps(1)} />
-        <Tab label="PROJETOS" {...a11yProps(2)} />
-        <Tab label="EMPRESAS" {...a11yProps(3)} />
-        <Tab label="PESSOAS" {...a11yProps(4)} />
-        <Tab label="CALENDAR" {...a11yProps(5)} />
+        <Tab icon={<HomeIcon />} iconPosition="start" label="HOME" {...a11yProps(0)} />
+        <Tab icon={<BackupTableIcon />} iconPosition="start"  label="OVERVIEW" {...a11yProps(1)} />
+        <Tab icon={<RecentActorsIcon />} iconPosition="start"  label="PROJETOS" {...a11yProps(2)} />
+        <Tab icon={<BusinessIcon />} iconPosition="start"  label="EMPRESAS" {...a11yProps(3)} />
+        <Tab icon={<PeopleIcon />} iconPosition="start"  label="PESSOAS" {...a11yProps(4)} />
+        <Tab icon={<CalendarMonthIcon />} iconPosition="start"  label="CALENDAR" {...a11yProps(5)} />
+        
         {/* <Tab label="Item Six" {...a11yProps(5)} />
         <Tab label="Item Seven" {...a11yProps(6)} /> */}
       </Tabs>
@@ -154,7 +161,7 @@ export default function VerticalTabs(props) {
       <Empresas />
       </TabPanel>
       <TabPanel value={value} index={4}>
-      <Pessoas />  
+      <Pessoas />
       </TabPanel>
       <TabPanel value={value} index={5}>
       <Calendar />
