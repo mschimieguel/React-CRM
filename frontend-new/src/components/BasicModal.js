@@ -3,6 +3,9 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import TextField from "@mui/material/TextField";
+import Form from "./Form"
+import "./BasicModal.css"
 
 const style = {
   position: "absolute",
@@ -14,8 +17,6 @@ const style = {
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
-  backgroundColor: "white",
-  display: "flex",
 };
 
 export default function BasicModal() {
@@ -33,36 +34,18 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <form>
-
-          <div>
-          <label>Date</label>
-          <input
-            type='date'
-            min='2019-01-01'
-            max='2022-12-31'
-          />
-        </div>
-            <div>
-              <label>Nome do Lead</label>
-              <input type="text" />
-            </div>
-            <div>
-              <label>E-mail</label>
-              <input type="text" />
-            </div>
-            <div>
-              <label>Telefone</label>
-              <input type="text" />
-            </div>
-
-          </form>
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Text in a modal
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
           </Typography>
+
+          <Form ClassName="Form"/>
+
+          
+
+          <Button variant="contained" sx={{width: "4ch"} }>Ok</Button>
         </Box>
       </Modal>
     </div>
