@@ -83,9 +83,24 @@ export default function VerticalTabs(props) {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <h1>LEAD - ETAPA 1</h1>
-        {props.leads.map((cliente) => (
+        {props.leads.filter((i) => (i.etapa.toString() === "1") ).map((cliente) => (
           <MediaCard 
-            key = {cliente.id}
+            key={cliente.id}
+            nome={cliente.nome}
+            email={cliente.email}
+            telefone={cliente.telefone}
+            tipo= {cliente.tipo}
+            etapa={cliente.etapa}
+            data={cliente.data}
+            dataFinal={cliente.expectativa}
+          />         
+        ))}
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <h1>LEAD - ETAPA 2</h1>
+        {props.leads.filter((i) => (i.etapa.toString() === "2") ).map((cliente) => (
+          <MediaCard 
+            key= {cliente.id}
             nome= {cliente.nome}
             email=  {cliente.email}
             telefone= {cliente.telefone}
@@ -93,7 +108,37 @@ export default function VerticalTabs(props) {
             etapa={cliente.etapa}
             data={cliente.data}
             dataFinal={cliente.expectativa}
-          />
+          />         
+        ))}
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <h1>LEAD - ETAPA 3</h1>
+        {props.leads.filter((i) => (i.etapa.toString() === "3") ).map((cliente) => (
+          <MediaCard 
+            key= {cliente.id}
+            nome= {cliente.nome}
+            email=  {cliente.email}
+            telefone= {cliente.telefone}
+            tipo= {cliente.tipo}
+            etapa={cliente.etapa}
+            data={cliente.data}
+            dataFinal={cliente.expectativa}
+          />         
+        ))}
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <h1>LEAD - ETAPA 4</h1>
+        {props.leads.filter((i) => (i.etapa.toString() === "4") ).map((cliente) => (
+          <MediaCard 
+            key= {cliente.id}
+            nome= {cliente.nome}
+            email=  {cliente.email}
+            telefone= {cliente.telefone}
+            tipo= {cliente.tipo}
+            etapa={cliente.etapa}
+            data={cliente.data}
+            dataFinal={cliente.expectativa}
+          />         
         ))}
       </TabPanel>
       <TabPanel value={value} index={3}>
