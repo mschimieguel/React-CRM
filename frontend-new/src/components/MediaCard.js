@@ -8,6 +8,13 @@ import Typography from "@mui/material/Typography";
 import BasicModal from "./BasicModal";
 
 export default function MediaCard(props) {
+  const ChangedLeadHandler = (enteredChangedLead) => {
+    const LeadData = {
+      ...enteredChangedLead,
+    };
+    props.onChangeLead(LeadData);
+  };
+
   return (
     <div>
       <Card sx={{ maxWidth: 345, boxShadow: 5, marginTop: 2 }}>
@@ -33,14 +40,23 @@ export default function MediaCard(props) {
              <Typography variant="h6" color="text.secondary">
             e-mail: {props.email}
           </Typography>
-            */}
-
-          <Typography variant="h6" color="text.secondary">
-            Tipo: {props.tipo}
-          </Typography>
           <Typography variant="h6" color="text.secondary">
             Etapa: {props.etapa}
           </Typography>
+            */}
+          <Typography variant="h6" color="text.secondary">
+            Descricao: 
+                  asnhebfdhsbsdss 
+            fuisdcbisdbfisdjcbjdcjdnjd
+            efefewfwefwe
+              efdfesfsdf efefwf  efe eefefe efsdkdsk ddsjfsfn fdsfsdjf 
+              odkfdsfksd 
+              fdfd fdf dfd fdfdfdfd  fdfdfdfd df ddfdfdfd
+          </Typography>
+          <Typography variant="h6" color="text.secondary">
+            Tipo: {props.tipo}
+          </Typography>
+
           <Typography variant="h6" color="text.secondary">
             data: {props.data.toString()}
           </Typography>
@@ -61,6 +77,7 @@ export default function MediaCard(props) {
             etapa={props.etapa}
             data={props.data}
             dataFinal={props.dataFinal}
+            onChangeLead={ChangedLeadHandler}
           />
         </CardActions>
       </Card>

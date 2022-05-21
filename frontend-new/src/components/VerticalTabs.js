@@ -14,6 +14,7 @@ import BasicModal from "./BasicModal";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
+ 
   return (
     <div
       role="tabpanel"
@@ -96,6 +97,7 @@ export default function VerticalTabs(props) {
             etapa={cliente.etapa}
             data={cliente.data}
             dataFinal={cliente.expectativa}
+            
           />         
         ))}
       </TabPanel>
