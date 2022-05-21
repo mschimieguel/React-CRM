@@ -52,6 +52,7 @@ export default function MediaCard(props) {
           {/* <Button size="small">Share</Button>
           <Button size="small">Learn More</Button> */}
           <BasicModal
+            mode="modify"
             key={props.id}
             nome={props.nome}
             email={props.email}

@@ -26,7 +26,16 @@ export default function BasicModal(props) {
 
   return (
     <div>
-      <Button variant="contained" onClick={handleOpen}>Editar</Button>
+      <Button variant="contained" onClick={handleOpen}>
+        {(() => {
+          switch (props.mode) {
+            case "add":
+              return "Adicionar";
+            case "modify":
+              return "OK";
+          }
+        })()}
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}

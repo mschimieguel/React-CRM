@@ -10,6 +10,7 @@ import Overview from "../pages/Overview";
 import MediaCard from "./MediaCard";
 import BasicModal from "./BasicModal";
 
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -82,8 +83,10 @@ export default function VerticalTabs(props) {
         <Overview />
       </TabPanel>
       <TabPanel value={value} index={2}>
+      
         <h1>LEAD - ETAPA 1</h1>
         {props.leads.filter((i) => (i.etapa.toString() === "1") ).map((cliente) => (
+          
           <MediaCard 
             key={cliente.id}
             nome={cliente.nome}
@@ -142,7 +145,7 @@ export default function VerticalTabs(props) {
         ))}
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <BasicModal />
+        
       </TabPanel>
       <TabPanel value={value} index={4}>
         Item Five

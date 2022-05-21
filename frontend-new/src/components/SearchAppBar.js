@@ -10,6 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import ImageAvatars from './ImageAvatars';
 import ContainedButtons from './ContainedButtons';
+import BasicModal from './BasicModal';
 
 import styles from './SearchAppBar.module.css';
 
@@ -78,7 +79,7 @@ export default function SearchAppBar() {
           >
             8-CRM 
           </Typography>
-          <ContainedButtons />
+          <BasicModal mode="add"/>
           <Search >
             <SearchIconWrapper>
               <SearchIcon />
