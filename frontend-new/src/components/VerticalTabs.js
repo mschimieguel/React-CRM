@@ -92,7 +92,7 @@ export default function VerticalTabs(props) {
             tipo= {cliente.tipo}
             etapa={cliente.etapa}
             data={cliente.data}
-            dataFinal={cliente.dataFinal}
+            dataFinal={cliente.expectativa}
           />
         ))}
       </TabPanel>
