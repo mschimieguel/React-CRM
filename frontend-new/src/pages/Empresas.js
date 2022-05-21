@@ -7,6 +7,8 @@ function Empresas (){
             Incididunt consectetur id nulla proident ipsum commodo. </p>
 
             {/* <DashboardNavbar/> */}
+
+            
     </div>
 }
 

@@ -11,6 +11,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import ImageAvatars from './ImageAvatars';
 import ContainedButtons from './ContainedButtons';
 import BasicModal from './BasicModal';
+import Container from '@mui/material/Container';
 
 import styles from './SearchAppBar.module.css';
 
@@ -60,6 +61,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchAppBar() {
   return (
+    
     <Box  sx={{ flexGrow: 1 }}>
       <AppBar position="static" >
         <Toolbar className={styles.background} >

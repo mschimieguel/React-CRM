@@ -7,6 +7,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import BasicModal from "./BasicModal";
 
+import Avatar from '@mui/material/Avatar';
+
 export default function MediaCard(props) {
   return (
     <div>
@@ -18,6 +20,7 @@ export default function MediaCard(props) {
           alt="green iguana"
         /> */}
         <CardContent>
+        <Avatar variant="rounded" src="avatar1.jpg"   />
           <Typography gutterBottom variant="h5" component="div">
             {props.nome}
           </Typography>
@@ -60,7 +63,7 @@ export default function MediaCard(props) {
         <CardActions>
           {/* <Button size="small">Share</Button>
           <Button size="small">Learn More</Button> */}
-          <BasicModal
+          <BasicModal 
             mode="modify"
             key={props.id}
             nome={props.nome}
