@@ -11,6 +11,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import ImageAvatars from './ImageAvatars';
 import ContainedButtons from './ContainedButtons';
 
+import styles from './SearchAppBar.module.css';
+
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -55,10 +57,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchAppBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
+    <Box  sx={{ flexGrow: 1 }}>
+      <AppBar position="static" >
+        <Toolbar className={styles.background} >
+          <IconButton 
             size="large"
             edge="start"
             color="inherit"
@@ -68,7 +70,7 @@ export default function SearchAppBar() {
             <MenuIcon />
             
           </IconButton>
-          <Typography
+          <Typography 
             variant="h6"
             noWrap
             component="div"
@@ -77,7 +79,7 @@ export default function SearchAppBar() {
             8-CRM 
           </Typography>
           <ContainedButtons />
-          <Search>
+          <Search >
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
