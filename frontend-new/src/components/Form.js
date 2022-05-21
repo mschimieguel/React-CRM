@@ -12,7 +12,7 @@ const Etapas = [
   { label: "Finalizado" },
 ];
 
-export default function Form() {
+export default function Form(props) {
   return (
     <Box
       component="form"
@@ -28,24 +28,24 @@ export default function Form() {
             id="outlined"
             label="Data"
             type="date"
-            defaultValue="2019-01-01"
+            defaultValue= {props.data}
             direction="row"
           />
           <TextField
             id="outlined"
             label="Data Final"
             type="date"
-            defaultValue="2022-01-01"
+            defaultValue={props.DataFinal}
             direction="row"
           />
         </Stack>
 
-        <TextField id="outlined" label="Nome" defaultValue="Matheus Silva" />
+        <TextField id="outlined" label="Nome" defaultValue={props.nome} />
         <TextField
           inputProps={{ inputMode: "text", pattern: "*@*" }}
           id="outlined"
           label="E-mail"
-          defaultValue="matheus@email.com"
+          defaultValue={props.email}
           margin="dense"
         />
 
@@ -53,14 +53,14 @@ export default function Form() {
           inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
           id="outlined"
           label="Telefone"
-          defaultValue="31991617267"
+          defaultValue={props.telefone}
         />
-        <RadioButton />
+        <RadioButton tipo={props.tipo}/>
         <Autocomplete
           disablePortal
           id="combo-box-demo"
           options={Etapas}
-          defaultValue={Etapas[0]}
+          defaultValue={props.etapa}
           sx={{ width: 300 }}
           renderInput={(params) => (
             <TextField {...params} label="Etapa do Pipeline" />

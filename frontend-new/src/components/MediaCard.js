@@ -49,7 +49,16 @@ export default function MediaCard(props) {
         <CardActions>
           {/* <Button size="small">Share</Button>
           <Button size="small">Learn More</Button> */}
-          <BasicModal/>
+          <BasicModal
+            key = {props.id}
+            nome= {props.nome}
+            email=  {props.email}
+            telefone= {props.telefone}
+            tipo= {props.tipo}
+            etapa={props.etapa}
+            data={props.data}
+            dataFinal={props.dataFinal}
+          />
         </CardActions>
       </Card>
     </div> 

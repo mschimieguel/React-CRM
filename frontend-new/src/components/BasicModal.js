@@ -4,8 +4,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
-import Form from "./Form"
-import "./BasicModal.css"
+import Form from "./Form";
+import "./BasicModal.css";
 
 const style = {
   position: "absolute",
@@ -19,14 +19,14 @@ const style = {
   p: 4,
 };
 
-export default function BasicModal() {
+export default function BasicModal(props) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button variant="contained" onClick={handleOpen}>Editar</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -41,11 +41,21 @@ export default function BasicModal() {
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
           </Typography>
 
-          <Form ClassName="Form"/>
+          <Form
+            ClassName="Form"
+            key={props.id}
+            nome={props.nome}
+            email={props.email}
+            telefone={props.telefone}
+            tipo={props.tipo}
+            etapa={props.etapa}
+            data={props.data}
+            dataFinal={props.dataFinal}
+          />
 
-          
-
-          <Button variant="contained" sx={{width: "4ch"} }>Ok</Button>
+          <Button variant="contained" sx={{ width: "4ch" }}>
+            Ok
+          </Button>
         </Box>
       </Modal>
     </div>

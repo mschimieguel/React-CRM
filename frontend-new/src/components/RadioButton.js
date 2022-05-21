@@ -5,7 +5,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 
-export default function RadioButton() {
+export default function RadioButton(props) {
   return (
     <FormControl>
       <FormLabel id="demo-row-radio-buttons-group-label">Tipo</FormLabel>
@@ -13,6 +13,8 @@ export default function RadioButton() {
         row
         aria-labelledby="empresa-pessoa"
         name="row-radio-buttons-group"
+        defaultValue={props.tipo}
+        defaultChecked={props.tipo}
       >
         <FormControlLabel value="Empresa" control={<Radio />} label="Empresa" />
         <FormControlLabel value="Pessoa" control={<Radio />} label="Pessoa" />
