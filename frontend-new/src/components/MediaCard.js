@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import BasicModal from './BasicModal';
 
-export default function MediaCard() {
+export default function MediaCard(props) {
   return (
 
     <div>
@@ -20,13 +20,31 @@ export default function MediaCard() {
           alt="green iguana"
         /> */}
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
+          <Typography gutterBottom variant="h4" component="div">
+            {props.nome}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          <Typography variant="h6" color="text.secondary">
+            ID: {''+(props.id)}
           </Typography>
+          <Typography variant="h6" color="text.secondary">
+            Telefone: {props.telefone}
+          </Typography>
+          <Typography variant="h6" color="text.secondary">
+            e-mail: {props.email}
+          </Typography>
+          <Typography variant="h6" color="text.secondary">
+            Tipo: {props.tipo}
+          </Typography>
+          <Typography variant="h6" color="text.secondary">
+            Etapa: {props.etapa}
+          </Typography>
+          <Typography variant="h6" color="text.secondary">
+            data: {props.data.toString()}
+          </Typography>
+          <Typography variant="h6" color="text.secondary">
+            dataFinal: {props.dataFinal.toString()}
+          </Typography>
+
         </CardContent>
         <CardActions>
           {/* <Button size="small">Share</Button>

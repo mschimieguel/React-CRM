@@ -1,14 +1,14 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import * as React from "react";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
-import Home from '../pages/Home';
-import Overview from '../pages/Overview';
-import MediaCard from './MediaCard';
-import BasicModal from './BasicModal';
+import Home from "../pages/Home";
+import Overview from "../pages/Overview";
+import MediaCard from "./MediaCard";
+import BasicModal from "./BasicModal";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -39,11 +39,11 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,
-    'aria-controls': `vertical-tabpanel-${index}`,
+    "aria-controls": `vertical-tabpanel-${index}`,
   };
 }
 
-export default function VerticalTabs() {
+export default function VerticalTabs(props) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -52,7 +52,12 @@ export default function VerticalTabs() {
 
   return (
     <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 860 }} 
+      sx={{
+        flexGrow: 1,
+        bgcolor: "background.paper",
+        display: "flex",
+        height: 860,
+      }}
     >
       <Tabs
         orientation="vertical"
@@ -60,7 +65,7 @@ export default function VerticalTabs() {
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider' }}
+        sx={{ borderRight: 1, borderColor: "divider" }}
       >
         <Tab label="HOME" {...a11yProps(0)} />
         <Tab label="OVERVIEW" {...a11yProps(1)} />
@@ -78,8 +83,18 @@ export default function VerticalTabs() {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <h1>LEAD - ETAPA 1</h1>
-        <MediaCard />
-        <MediaCard />
+        {props.leads.map((cliente) => (
+          <MediaCard 
+            key = {cliente.id}
+            nome= {cliente.nome}
+            email=  {cliente.email}
+            telefone= {cliente.telefone}
+            tipo= {cliente.tipo}
+            etapa={cliente.etapa}
+            data={cliente.data}
+            dataFinal={cliente.dataFinal}
+          />
+        ))}
       </TabPanel>
       <TabPanel value={value} index={3}>
         <BasicModal />
