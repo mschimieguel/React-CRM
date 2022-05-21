@@ -9,27 +9,31 @@ import BasicModal from './BasicModal';
 
 export default function MediaCard() {
   return (
-    <Card sx={{ maxWidth: 345, boxShadow: 24, marginTop: 2 }}>
-{/*       <CardMedia
-        component="img"
-        height="140"
-        image="../static/rashed-alakroka-cc.jpg"
-        alt="green iguana"
-      /> */}
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        {/* <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button> */}
-        <BasicModal/>
-      </CardActions>
-    </Card>
+
+    <div>
+      
+      <Card sx={{ maxWidth: 345, boxShadow: 5, marginTop: 2 }}>
+  {/*       <CardMedia
+          component="img"
+          height="140"
+          image="../static/rashed-alakroka-cc.jpg"
+          alt="green iguana"
+        /> */}
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Lizard
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
+        </CardContent>
+        <CardActions>
+          {/* <Button size="small">Share</Button>
+          <Button size="small">Learn More</Button> */}
+          <BasicModal/>
+        </CardActions>
+      </Card>
+    </div> 
   );
 }

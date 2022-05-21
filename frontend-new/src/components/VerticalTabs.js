@@ -77,6 +77,7 @@ export default function VerticalTabs() {
         <Overview />
       </TabPanel>
       <TabPanel value={value} index={2}>
+        <h1>LEAD - ETAPA 1</h1>
         <MediaCard />
         <MediaCard />
       </TabPanel>
