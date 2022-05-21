@@ -1,9 +1,9 @@
-function Home (){
+function Empresas (){
     return <div>
-        <h1>Home</h1>
+        <h1>Empresas</h1>
         <p>
             Incididunt consectetur id nulla proident ipsum commodo. </p>
     </div>
 }
 
-export default Home;
+export default Empresas;

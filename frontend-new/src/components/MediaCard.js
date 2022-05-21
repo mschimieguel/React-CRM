@@ -10,7 +10,7 @@ import BasicModal from "./BasicModal";
 export default function MediaCard(props) {
   return (
     <div>
-      <Card sx={{ maxWidth: 345, boxShadow: 5, marginTop: 2 }}>
+      <Card sx={{ maxWidth: 345, boxShadow: 5, marginTop: 2, padding:2 }}>
         {/*       <CardMedia
           component="img"
           height="140"
@@ -18,12 +18,12 @@ export default function MediaCard(props) {
           alt="green iguana"
         /> */}
         <CardContent>
-          <Typography gutterBottom variant="h4" component="div">
+          <Typography gutterBottom variant="h5" component="div">
             {props.nome}
           </Typography>
 
           {/*
-            <Typography variant="h6" color="text.secondary">
+            <Typography variant="h7" color="text.secondary">
             ID: {"" + props.id}
           </Typography>
             <Typography variant="h6" color="text.secondary">
@@ -35,17 +35,26 @@ export default function MediaCard(props) {
           </Typography>
             */}
 
-          <Typography variant="h6" color="text.secondary">
+          <Typography variant="h7" color="text.secondary">
             Tipo: {props.tipo}
+            <br />
           </Typography>
-          <Typography variant="h6" color="text.secondary">
+       {/*    <Typography variant="h7" color="text.secondary">
             Etapa: {props.etapa}
-          </Typography>
-          <Typography variant="h6" color="text.secondary">
+            <br />
+          </Typography> */}
+          <Typography variant="h7" color="text.secondary">
             data: {props.data.toString()}
+            <br />
           </Typography>
-          <Typography variant="h6" color="text.secondary">
+          <Typography variant="h7" color="text.secondary">
             Expectativa: {props.dataFinal.toString()}
+            <br />
+            <br />
+          </Typography>
+          <Typography variant="h7" color="text.secondary">
+            <h7>Descrição:</h7>
+            <p>Reprehenderit eu deserunt enim eu laboris. Ad amet sit culpa veniam est labore </p>
           </Typography>
         </CardContent>
         <CardActions>

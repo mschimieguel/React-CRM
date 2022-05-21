@@ -14,6 +14,8 @@ import BasicModal from './BasicModal';
 
 import styles from './SearchAppBar.module.css';
 
+import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
+
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -68,7 +70,7 @@ export default function SearchAppBar() {
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <DashboardCustomizeIcon />
             
           </IconButton>
           <Typography 
