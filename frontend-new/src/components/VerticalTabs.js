@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import Home from '../pages/Home';
 import Overview from '../pages/Overview';
 import MediaCard from './MediaCard';
+import BasicModal from './BasicModal';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -64,7 +65,7 @@ export default function VerticalTabs() {
         <Tab label="HOME" {...a11yProps(0)} />
         <Tab label="OVERVIEW" {...a11yProps(1)} />
         <Tab label="CARDS" {...a11yProps(2)} />
-        <Tab label="Item Four" {...a11yProps(3)} />
+        <Tab label="MODAL" {...a11yProps(3)} />
         <Tab label="Item Five" {...a11yProps(4)} />
         <Tab label="Item Six" {...a11yProps(5)} />
         <Tab label="Item Seven" {...a11yProps(6)} />
@@ -80,7 +81,7 @@ export default function VerticalTabs() {
         <MediaCard />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Four
+        <BasicModal />
       </TabPanel>
       <TabPanel value={value} index={4}>
         Item Five

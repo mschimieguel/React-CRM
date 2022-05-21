@@ -5,16 +5,17 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import BasicModal from './BasicModal';
 
 export default function MediaCard() {
   return (
     <Card sx={{ maxWidth: 345, boxShadow: 24, marginTop: 2 }}>
-      <CardMedia
+{/*       <CardMedia
         component="img"
         height="140"
         image="../static/rashed-alakroka-cc.jpg"
         alt="green iguana"
-      />
+      /> */}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           Lizard
@@ -25,8 +26,9 @@ export default function MediaCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        {/* <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button> */}
+        <BasicModal/>
       </CardActions>
     </Card>
   );
