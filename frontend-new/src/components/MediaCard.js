@@ -12,7 +12,7 @@ export default function MediaCard() {
 
     <div>
       
-      <Card sx={{ maxWidth: 345, boxShadow: 5, marginTop: 2 }}>
+      <Card sx={{ maxWidth: 345, boxShadow: 5, marginTop: 2, }}>
   {/*       <CardMedia
           component="img"
           height="140"
