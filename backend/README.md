@@ -1,6 +1,14 @@
 # BACKEND: API em Flask-SQLite 
 
-## Executando:
+<br>
+
+# Executando:
+Há duas formas de execução, uma utilizando container ou com execução direta com a chamada do python, a diferença são as dependências.
+
+## Container:
+### Dependência:
+* Docker
+### Executando:
 1. Construa a imagem:
 ```bash
 $ docker build -t simple-flask-app:latest .
@@ -11,14 +19,35 @@ $ docker run -it -p 7776:7776 simple-flask-app
 ```
 3. Acesse http:127.0.0.1:7776 para visualizar a aplicação executando localmente.
 
-<br>
-
 > Obs: Ao 'hostear' o sistema trocar o parâmetro `-it` (iterativo) por `-d` (detached) no comando run.
 
 <br>
+
+---
+
+## Execução direta, com exemplo utilizando Ambiente Virtual:
+### Dependência:
+* Pytho 3.8.2
+* Venv (sudo apt install python3.8-venv)
+* pip (sudo apt install python3-pip)
+
+### Gerenciando ambiente:
+1. Criando ambiente:    `python3 -m venv ./venv`
+2. Ativando ambiente:  `source venv/bin/activate`
+3. Instalando dependências: `pip install -r requirements.txt`
+
+### Executando:
+1. Ativando ambiente:  `source venv/bin/activate`
+2. Executando: `python3 run.py`
+3. Desativando ambiente: `deactivate`
+
+<br>
+
 --- 
 
-## Arquitetura e fluxo de execução:
+<br>
+
+# Arquitetura e fluxo de execução:
 ### DevOps
 * O arquivo `Dockerfile` é responsável por criar o contêiner para execução.
 * O arquivo `requirements.txt` é responsável pelas dependências do projeto.
