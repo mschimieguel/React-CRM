@@ -37,6 +37,7 @@ def create_lead():
     """Create post lead"""
     response_data = json.loads(request.data.decode())
 
+    id = response_data['id']
     nome = response_data['nome']
     email = response_data['email']
     telefone = response_data['telefone']
@@ -45,17 +46,29 @@ def create_lead():
     data = js_to_py_datetime(response_data['data'])
     expectativa = js_to_py_datetime(response_data['expectativa'])
 
-    lead_obj = models.Lead(
-        nome = nome,
-        email = email,
-        telefone = telefone,
-        tipo = tipo,
-        etapa = etapa,
-        data = data,
-        expectativa = expectativa
-    )
+    if int(id) == -1:
+        lead_obj = models.Lead(
+            nome = nome,
+            email = email,
+            telefone = telefone,
+            tipo = tipo,
+            etapa = etapa,
+            data = data,
+            expectativa = expectativa
+        )
 
-    db.session.add(lead_obj)
+        db.session.add(lead_obj)
+    else:
+        lead_obj = models.Lead.query.filter_by(id=id).first()
+
+        setattr(lead_obj, 'nome', nome)
+        setattr(lead_obj, 'email', email)
+        setattr(lead_obj, 'telefone', telefone)
+        setattr(lead_obj, 'tipo', tipo)
+        setattr(lead_obj, 'etapa', int(etapa))
+        setattr(lead_obj, 'data', data)
+        setattr(lead_obj, 'expectativa', expectativa)
+
     db.session.commit()
     response = {
         'success': True,
