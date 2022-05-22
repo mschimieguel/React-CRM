@@ -1,9 +1,9 @@
-function Home (){
+function Pessoas (){
     return <div>
-        <h1>Home</h1>
+        <h1>Pessoas</h1>
         <p>
             Incididunt consectetur id nulla proident ipsum commodo. </p>
     </div>
 }
 
-export default Home;
+export default Pessoas;

@@ -7,8 +7,19 @@ import Box from "@mui/material/Box";
 
 import Home from "../pages/Home";
 import Overview from "../pages/Overview";
+import Empresas from "../pages/Empresas";
+import Pessoas from "../pages/Pessoas";
+import Calendar from "../pages/Calendar";
+
+import HomeIcon from '@mui/icons-material/Home';
+import BackupTableIcon from '@mui/icons-material/BackupTable';
+import RecentActorsIcon from '@mui/icons-material/RecentActors';
+import BusinessIcon from '@mui/icons-material/Business';
+import PeopleIcon from '@mui/icons-material/People';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+
 import MediaCard from "./MediaCard";
-import BasicModal from "./BasicModal";
+
 
 
 function TabPanel(props) {
@@ -69,13 +80,15 @@ export default function VerticalTabs(props) {
         aria-label="Vertical tabs example"
         sx={{ borderRight: 1, borderColor: "divider" }}
       >
-        <Tab label="HOME" {...a11yProps(0)} />
-        <Tab label="OVERVIEW" {...a11yProps(1)} />
-        <Tab label="CARDS" {...a11yProps(2)} />
-        <Tab label="MODAL" {...a11yProps(3)} />
-        <Tab label="Item Five" {...a11yProps(4)} />
-        <Tab label="Item Six" {...a11yProps(5)} />
-        <Tab label="Item Seven" {...a11yProps(6)} />
+        <Tab icon={<HomeIcon />} iconPosition="start" label="HOME" {...a11yProps(0)} />
+        <Tab icon={<BackupTableIcon />} iconPosition="start"  label="OVERVIEW" {...a11yProps(1)} />
+        <Tab icon={<RecentActorsIcon />} iconPosition="start"  label="PROJETOS" {...a11yProps(2)} />
+        <Tab icon={<BusinessIcon />} iconPosition="start"  label="EMPRESAS" {...a11yProps(3)} />
+        <Tab icon={<PeopleIcon />} iconPosition="start"  label="PESSOAS" {...a11yProps(4)} />
+        <Tab icon={<CalendarMonthIcon />} iconPosition="start"  label="CALENDAR" {...a11yProps(5)} />
+        
+        {/* <Tab label="Item Six" {...a11yProps(5)} />
+        <Tab label="Item Seven" {...a11yProps(6)} /> */}
       </Tabs>
       <TabPanel value={value} index={0}>
         <Home />
@@ -85,7 +98,7 @@ export default function VerticalTabs(props) {
       </TabPanel>
       <TabPanel value={value} index={2}>
       
-        <h1>LEAD - ETAPA 1</h1>
+        <h1>LEAD</h1>
         {props.leads.filter((i) => (i.etapa.toString() === "1") ).map((cliente) => (
           
           <MediaCard 
@@ -102,7 +115,7 @@ export default function VerticalTabs(props) {
         ))}
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <h1>LEAD - ETAPA 2</h1>
+        <h1>EM NOGOCIAÇÃO</h1>
         {props.leads.filter((i) => (i.etapa.toString() === "2") ).map((cliente) => (
           <MediaCard 
             key= {cliente.id}
@@ -117,7 +130,7 @@ export default function VerticalTabs(props) {
         ))}
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <h1>LEAD - ETAPA 3</h1>
+        <h1>EM CONTRATO</h1>
         {props.leads.filter((i) => (i.etapa.toString() === "3") ).map((cliente) => (
           <MediaCard 
             key= {cliente.id}
@@ -132,7 +145,7 @@ export default function VerticalTabs(props) {
         ))}
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <h1>LEAD - ETAPA 4</h1>
+        <h1>EM ANDAMENTO</h1>
         {props.leads.filter((i) => (i.etapa.toString() === "4") ).map((cliente) => (
           <MediaCard 
             key= {cliente.id}
@@ -147,17 +160,15 @@ export default function VerticalTabs(props) {
         ))}
       </TabPanel>
       <TabPanel value={value} index={3}>
-        
+      <Empresas />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        Item Five
+      <Pessoas />
       </TabPanel>
       <TabPanel value={value} index={5}>
-        Item Six
+      <Calendar />
       </TabPanel>
-      <TabPanel value={value} index={6}>
-        Item Seven
-      </TabPanel>
+
     </Box>
   );
 }
