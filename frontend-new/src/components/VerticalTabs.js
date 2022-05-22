@@ -20,6 +20,8 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 import MediaCard from "./MediaCard";
 
+import styles from "./VerticalTabs.module.css";
+
 
 
 function TabPanel(props) {
@@ -98,7 +100,7 @@ export default function VerticalTabs(props) {
       </TabPanel>
       <TabPanel value={value} index={2}>
       
-        <h1>LEAD</h1>
+        <h1 className={styles.lead} >LEAD</h1>
         {props.leads.filter((i) => (i.etapa.toString() === "1") ).map((cliente) => (
           
           <MediaCard 
@@ -115,7 +117,7 @@ export default function VerticalTabs(props) {
         ))}
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <h1>EM NOGOCIAÇÃO</h1>
+        <h1 className={styles.negocio}>NOGOCIAÇÃO</h1>
         {props.leads.filter((i) => (i.etapa.toString() === "2") ).map((cliente) => (
           <MediaCard 
             key= {cliente.id}
@@ -130,7 +132,7 @@ export default function VerticalTabs(props) {
         ))}
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <h1>EM CONTRATO</h1>
+        <h1 className={styles.contrato}>CONTRATO</h1>
         {props.leads.filter((i) => (i.etapa.toString() === "3") ).map((cliente) => (
           <MediaCard 
             key= {cliente.id}
@@ -145,7 +147,7 @@ export default function VerticalTabs(props) {
         ))}
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <h1>EM ANDAMENTO</h1>
+        <h1 className={styles.andamento}>EM ANDAMENTO</h1>
         {props.leads.filter((i) => (i.etapa.toString() === "4") ).map((cliente) => (
           <MediaCard 
             key= {cliente.id}
