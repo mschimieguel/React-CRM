@@ -45,10 +45,8 @@
    - [x] Criar endpoint para update do Lead (Breno)
 
 3. Como usuário, quero converter um Lead para Negócios.
-   - [ ] Estruturação de negócios no banco (Rodrigo)
-   - [ ] Criar componente para adição do Lead (Matheus)
-   - [ ] Criar componente para edição do Lead (Klysman)
-   - [ ] Organização dos cards no Board (Matheus)
-   - [ ] Criar endpoint para adição do Lead (Rodrigo)
-   - [ ] Criar endpoint para update do Lead (Breno)
-
+   - [ ] Criar componente para adição do Lead para pesssoa (Matheus)
+   - [ ] Criar componente para edição do Lead de negócio (Klysman)
+   - [ ] Criar sessão para somente empresas (Matheus)
+   - [ ] Criar sessão para somente pessoas (Klysman)
+   - [ ] Criar pagina Home com descrição (Klysman)
