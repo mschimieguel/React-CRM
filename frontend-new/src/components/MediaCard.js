@@ -48,7 +48,7 @@ export default function MediaCard(props) {
           </Typography>
             */}
 
-          <Typography variant="h6" color="text.secondary">
+ {/*          <Typography variant="h6" color="text.secondary">
             Descricao: 
                   asnhebfdhsbsdss 
             fuisdcbisdbfisdjcbjdcjdnjd
@@ -56,14 +56,15 @@ export default function MediaCard(props) {
               efdfesfsdf efefwf  efe eefefe efsdkdsk ddsjfsfn fdsfsdjf 
               odkfdsfksd 
               fdfd fdf dfd fdfdfdfd  fdfdfdfd df ddfdfdfd
-          </Typography>
-          <Typography variant="h6" color="text.secondary">
+          </Typography> */}
+          <Typography variant="h7" color="text.secondary">
             Tipo: {props.tipo}
+            <br />
           </Typography>
 
-          <Typography variant="h6" color="text.secondary">
+          <Typography variant="h7" color="text.secondary">
             
-            data: {props.data.toString()}
+            Data: {props.data.toString()}
             <br />
           </Typography>
           <Typography variant="h7" color="text.secondary">
