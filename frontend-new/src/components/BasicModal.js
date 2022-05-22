@@ -13,9 +13,11 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 400,
+  height: 500,
   bgcolor: "background.paper",
-  border: "2px solid #000",
   boxShadow: 24,
+  radius: 20,
+  
   p: 4,
 };
 
@@ -53,11 +55,14 @@ export default function BasicModal(props) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+          <Typography id="modal-modal-title" variant="h7" component="h2">
+            NOVO LEAD
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          Para adicionar leads rapidamente, clique no botão Adicionar lead na caixa de entrada de leads. Um lead sempre precisará estar vinculado a uma pessoa ou empresa
+          <br/>
+          <br/>
+          <br/>
           </Typography>
           
           <FormAdd />

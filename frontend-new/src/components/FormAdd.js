@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import styles from './FormAdd.module.css';
+
 export default function FormAdd() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -37,7 +39,7 @@ export default function FormAdd() {
   };
 
   return (
-      <form onSubmit={handleSubmit}>
+      <form className={styles.formAdd}  onSubmit={handleSubmit}>
         <input
           type="text"
           value={name}
@@ -49,6 +51,18 @@ export default function FormAdd() {
           value={email}
           placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="text"
+          value={telefone}
+          placeholder="Mobile Number"
+          onChange={(e) => setTelefone(e.target.value)}
+        />
+        <input
+          type="text"
+          value={telefone}
+          placeholder="Mobile Number"
+          onChange={(e) => setTelefone(e.target.value)}
         />
         <input
           type="text"
