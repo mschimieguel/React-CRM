@@ -10,7 +10,38 @@ import SearchAppBar from "./components/SearchAppBar";
 import Home from "./pages/Home";
 import Overview from "./pages/Overview";
 
-
+const OldLeads = [
+  {
+    id: 1,
+    nome: "Darth Vader",
+    email: "darthvader@imperio.com",
+    telefone: "99999-9999",
+    tipo: "Pessoa",
+    etapa: "Final",
+    data: new Date(2019, 1, 2),
+    dataFinal: new Date(2022, 12, 12),
+  },
+  {
+    id: 2,
+    nome: "Luke Skywalker",
+    email: "lukegostosao@aliancarebelde.com",
+    telefone: "1111-1111",
+    tipo: "Pessoa",
+    etapa: "Avancado",
+    data: new Date(2019, 1, 2),
+    dataFinal: new Date(2022, 12, 12),
+  },
+  {
+    id: 3,
+    nome: "Leia Skywalker",
+    email: "adorowookies@aliancarebelde.com",
+    telefone: "2222-2222",
+    tipo: "Pessoa",
+    etapa: "Inicial",
+    data: new Date(2019, 1, 2),
+    dataFinal: new Date(2022, 12, 12),
+  },
+];
 
  class App extends Component {
       

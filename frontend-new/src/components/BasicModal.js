@@ -3,9 +3,9 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import TextField from "@mui/material/TextField";
 import Form from "./Form";
 import "./BasicModal.css";
+import FormAdd from "./FormAdd";
 
 const style = {
   position: "absolute",
@@ -24,6 +24,13 @@ export default function BasicModal(props) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const saveChangedLeadHandler = (enteredChangedLead) => {
+    const LeadData = {
+      ...enteredChangedLead
+    };
+    props.onChangeLead(LeadData);
+  };
+
   return (
     <div>
       <Button variant="contained" onClick={handleOpen}>
@@ -34,6 +41,8 @@ export default function BasicModal(props) {
               return "Adicionar";
             case "modify":
               return "Mais informações";
+            default:
+              return "ERRO insira um modo para o BasicModal";
           }
         })()}
       </Button>
@@ -50,8 +59,11 @@ export default function BasicModal(props) {
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
           </Typography>
-
-          <Form
+          
+          <FormAdd />
+        
+        {/*
+         <Form
             ClassName="Form"
             key={props.id}
             nome={props.nome}
@@ -61,11 +73,8 @@ export default function BasicModal(props) {
             etapa={props.etapa}
             data={props.data}
             dataFinal={props.dataFinal}
-          />
-
-          <Button variant="contained" sx={{ width: "4ch" }}>
-            Ok
-          </Button>
+            onSaveChagedLead = {saveChangedLeadHandler}
+      />*/}
         </Box>
       </Modal>
     </div>
