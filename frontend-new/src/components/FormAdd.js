@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export default function FormAdd() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [mobileNumber, setMobileNumber] = useState("");
+  const [telefone, setTelefone] = useState("");
   const [message, setMessage] = useState("");
 
   let handleSubmit = async (e) => {
@@ -12,9 +12,10 @@ export default function FormAdd() {
       let res = await fetch("http://127.0.0.1:7776/lead/", {
         method: "POST",
         body: JSON.stringify({
-          nome: "LoL",
-          email: "jojo@hot.com",
-          telefone: "31 3285 2888",
+          id: -1,
+          nome: name,
+          email: email,
+          telefone: telefone,
           tipo: "Pessoa",
           etapa: 2,
           data: new Date(2019, 1, 2),
@@ -25,7 +26,7 @@ export default function FormAdd() {
       if (res.status === 200) {
         setName("");
         setEmail("");
-        setMobileNumber("");
+        setTelefone("");
         setMessage("User created successfully");
       } else {
         setMessage("Some error occured");
@@ -51,9 +52,9 @@ export default function FormAdd() {
         />
         <input
           type="text"
-          value={mobileNumber}
+          value={telefone}
           placeholder="Mobile Number"
-          onChange={(e) => setMobileNumber(e.target.value)}
+          onChange={(e) => setTelefone(e.target.value)}
         />
 
         <button type="submit">Create</button>
