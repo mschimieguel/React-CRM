@@ -33,14 +33,14 @@ export default function BasicModal(props) {
 
   return (
     <div>
-      <Button variant="contained" onClick={handleOpen}>
+      <Button  variant="contained" onClick={handleOpen}>
         {(() => {
           // eslint-disable-next-line default-case
           switch (props.mode) {
             case "add":
               return "Adicionar";
             case "modify":
-              return "Mais informações";
+              return "editar";
             default:
               return "ERRO insira um modo para o BasicModal";
           }

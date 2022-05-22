@@ -9,6 +9,8 @@ import BasicModal from "./BasicModal";
 
 import Avatar from '@mui/material/Avatar';
 
+import CustomizedDialogs from "./CustomizedDialogs";
+
 export default function MediaCard(props) {
   const ChangedLeadHandler = (enteredChangedLead) => {
     const LeadData = {
@@ -80,6 +82,7 @@ export default function MediaCard(props) {
         <CardActions>
           {/* <Button size="small">Share</Button>
           <Button size="small">Learn More</Button> */}
+          <CustomizedDialogs/>
           <BasicModal 
             mode="modify"
             key={props.id}
