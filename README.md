@@ -29,20 +29,20 @@
 
 1. Como usuário, quero ver todos os Leads.
    - [x] Estruturar o flask (Breno)
-   - [ ] Adicionar SQLite (Rodrigo)
+   - [x] Adicionar SQLite (Rodrigo)
    - [x] Conteinerização do flask (Breno)
-   - [ ] Estruturar Lead no banco (Rodrigo)
+   - [x] Estruturar Lead no banco (Rodrigo)
    - [x] Criar app do React (Matheus)
    - [x] Definir a estrutura do Lead (Klysman)
    - [x] Definir a estrutura do Board de Negócios (Klysman)
    - [x] Construir layout inicial do Board no Adobe XD (Klysman)
-   - [ ] Popular o banco com o Pyfake (Breno)
+   - [x] Popular o banco com o Pyfake (Breno)
 
 2. Como usuário, quero editar um Lead.
-   - [ ] Criar componente para adição do Lead (Matheus)
-   - [ ] Criar componente para edição do Lead (Klysman)
-   - [ ] Criar endpoint para adição do Lead (Rodrigo)
-   - [ ] Criar endpoint para update do Lead (Breno)
+   - [x] Criar componente para adição do Lead (Matheus)
+   - [x] Criar componente para edição do Lead (Klysman)
+   - [x] Criar endpoint para adição do Lead (Rodrigo)
+   - [x] Criar endpoint para update do Lead (Breno)
 
 3. Como usuário, quero converter um Lead para Negócios.
    - [ ] Estruturação de negócios no banco (Rodrigo)
