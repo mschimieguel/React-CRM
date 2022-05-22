@@ -61,7 +61,7 @@ export default function CustomizedDialogs() {
   return (
     <div>
       <Button variant="outlined" onClick={handleClickOpen}>
-        Mais informações
+        Histórico
       </Button>
       <BootstrapDialog
         onClose={handleClose}

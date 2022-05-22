@@ -61,12 +61,9 @@ export default function FormAdd() {
           placeholder="Mobile Number"
           onChange={(e) => setTelefone(e.target.value)}
         />
-        <label for="fname">Tipo</label>
-        <input
-          type="text"
-          placeholder="Pessoa ou empresa"
-          onChange={(e) => setTelefone(e.target.value)}
-        />
+
+        
+
         
 
         <button className={styles.btn}  type="submit">Criar</button>

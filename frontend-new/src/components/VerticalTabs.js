@@ -161,9 +161,12 @@ export default function VerticalTabs(props) {
           />         
         ))}
       </TabPanel>
+
       <TabPanel value={value} index={3}>
       <Empresas />
       </TabPanel>
+
+      
       <TabPanel value={value} index={4}>
       <Pessoas />
       </TabPanel>
