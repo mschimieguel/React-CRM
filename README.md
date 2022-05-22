@@ -46,7 +46,7 @@
 
 3. Como usuário, quero converter um Lead para Negócios.
    - [ ] Criar componente para adição do Lead para pesssoa (Matheus)
-   - [ ] Criar componente para edição do Lead de negócio (Klysman)
+   - [ ] Criar componente para edição do Lead para negócio (Klysman)
    - [ ] Criar sessão para somente empresas (Matheus)
    - [ ] Criar sessão para somente pessoas (Klysman)
    - [ ] Criar pagina Home com descrição (Klysman)
