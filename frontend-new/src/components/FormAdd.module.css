@@ -10,29 +10,66 @@
     opacity: 1;
     padding:10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    width: 500px;
 }
 
-.select {
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  .input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .input[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
 
+
+/* label {
+    font-size: 14px;
+}
+input {
+    box-sizing: border-box;
+    height: 39px;
+    width: 426px;
+    border: 1px solid #E6E6E6;
+    border-radius: 20px;
+    color: #333333;
+    font-size: 18px;
+} */
+
+
+.form_control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    
+
+    
+  }
+  
+  .form_control label {
+    margin-bottom: 0.2em;
+    font-weight: bold;
+    padding-top: 10px;
+    color: #333333f5;
+    
+  }
+  
+  .form_control input {
+    padding: 1.7em;
+    border-radius: 5;
+    border: 1px solid #0dda9671;
+    
+    
+  }
+  
+  .form_control input::placeholder {
+    color: #7b7b7b;
+    
+  }
+
+  .btn {
+    background-color: #222;
+    color: #fff;
+    padding: 0.7em 1.2em;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .btn:hover {
+    color: #33ff88;
+  }
