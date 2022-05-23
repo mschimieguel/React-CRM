@@ -1,4 +1,4 @@
-### Aplicativo CRM simples escrito com React.
+# Aplicativo CRM simples escrito com React.
 
 #### Recursos:
 - Armazenamento de dados persistente com o banco de dados
@@ -62,7 +62,6 @@
 
 # BACKEND: API em Flask-SQLite 
 
-# Executando:
 Há duas formas de execução, uma utilizando container ou com execução direta com a chamada do python, a diferença são as dependências.
 
 ## Container:
