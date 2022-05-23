@@ -23,6 +23,14 @@ import MediaCard from "./MediaCard";
 import styles from "./VerticalTabs.module.css";
 
 
+function uniqByKeepFirst(array, key) {
+  let seen = new Set();
+  return array.filter(item => {
+      let k = key(item);
+      return seen.has(k) ? false : seen.add(k);
+  });
+}
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -64,6 +72,7 @@ export default function VerticalTabs(props) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const unique = uniqByKeepFirst(props.leads,it => it.email);
 
   return (
     <Box
@@ -101,7 +110,7 @@ export default function VerticalTabs(props) {
       <TabPanel value={value} index={2}>
       
         <h1 className={styles.lead} >LEAD</h1>
-        {props.leads.filter((i) => (i.etapa.toString() === "1") ).map((cliente) => (
+        {unique.filter((i) => (i.etapa.toString() === "1") ).map((cliente) => (
           
           <MediaCard 
             key={cliente.id}
@@ -118,7 +127,7 @@ export default function VerticalTabs(props) {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <h1 className={styles.negocio}>NOGOCIAÇÃO</h1>
-        {props.leads.filter((i) => (i.etapa.toString() === "2") ).map((cliente) => (
+        {unique.filter((i) => (i.etapa.toString() === "2") ).map((cliente) => (
           <MediaCard 
             key= {cliente.id}
             nome= {cliente.nome}
@@ -133,7 +142,7 @@ export default function VerticalTabs(props) {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <h1 className={styles.contrato}>CONTRATO</h1>
-        {props.leads.filter((i) => (i.etapa.toString() === "3") ).map((cliente) => (
+        {unique.filter((i) => (i.etapa.toString() === "3") ).map((cliente) => (
           <MediaCard 
             key= {cliente.id}
             nome= {cliente.nome}
@@ -148,7 +157,7 @@ export default function VerticalTabs(props) {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <h1 className={styles.andamento}>EM ANDAMENTO</h1>
-        {props.leads.filter((i) => (i.etapa.toString() === "4") ).map((cliente) => (
+        {unique.filter((i) => (i.etapa.toString() === "4") ).map((cliente) => (
           <MediaCard 
             key= {cliente.id}
             nome= {cliente.nome}

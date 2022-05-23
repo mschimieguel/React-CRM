@@ -38,6 +38,8 @@ export default function MediaCard(props) {
     props.onChangeLead(LeadData);
   };
 
+
+
   return (
     <div>
       <Card sx={{ maxWidth: 345, boxShadow: 5, marginTop: 2, padding:2 }}>
