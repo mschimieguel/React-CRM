@@ -24,6 +24,7 @@
 * **DataBase**: SQL-Lite
 
 ---
+<img src="https://github.com/klysman08/React-Firebase-CRM/blob/master/animacao-dev-crm-eng-soft.gif" width="640" height="360" />
 
 ### Backlog do Produto - CRM
 
