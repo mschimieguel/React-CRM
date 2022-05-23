@@ -11,11 +11,30 @@ import Avatar from '@mui/material/Avatar';
 
 import CustomizedDialogs from "./CustomizedDialogs";
 
+
+
+
+
 export default function MediaCard(props) {
+  const year =  props.data.toString().slice(0,4);
+  const month =  props.data.toString().slice(5,7);
+  const day =  props.data.toString().slice(8,10);
+  const mydate = " "+ day + "/" + month + "/" + year + " ";
+
+  const ExpectYear =  props.dataFinal.toString().slice(0,4);
+  const ExpectMonth =  props.dataFinal.toString().slice(5,7);
+  const ExpectDay =  props.dataFinal.toString().slice(8,10);
+  const myExpectDate = " "+ ExpectDay + "/" + ExpectMonth + "/" + ExpectYear + " ";
+ 
+  
+ 
   const ChangedLeadHandler = (enteredChangedLead) => {
     const LeadData = {
       ...enteredChangedLead,
     };
+    
+    
+
     props.onChangeLead(LeadData);
   };
 
@@ -65,12 +84,11 @@ export default function MediaCard(props) {
           </Typography>
 
           <Typography variant="h7" color="text.secondary">
-            
-            Data: {props.data.toString()}
+            Data: {mydate}
             <br />
           </Typography>
           <Typography variant="h7" color="text.secondary">
-            Expectativa: {props.dataFinal.toString()}
+            Expectativa: {myExpectDate}
             <br />
             <br />
           </Typography>
