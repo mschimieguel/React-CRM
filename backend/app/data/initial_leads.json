@@ -68,7 +68,7 @@
         "email": "darthvader@imperio.com",
         "telefone": "99999-9999",
         "tipo": "Pessoa",
-        "etapa": "Final",
+        "etapa": 2,
         "data": "2022-05-01",
         "expectativa": "2022-05-01"
     },
@@ -77,7 +77,7 @@
         "email": "lukegostosao@aliancarebelde.com",
         "telefone": "1111-1111",
         "tipo": "Pessoa",
-        "etapa": "Avancado",
+        "etapa": 3,
         "data": "2022-05-01",
         "expectativa": "2022-05-01"
     },
@@ -86,7 +86,7 @@
         "email": "adorowookies@aliancarebelde.com",
         "telefone": "2222-2222",
         "tipo": "Pessoa",
-        "etapa": "Inicial",
+        "etapa": 1,
         "data": "2022-05-01",
         "expectativa": "2022-05-01"
     }

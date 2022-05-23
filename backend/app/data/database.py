@@ -2,19 +2,13 @@
 
 import json
 import os
+from app.models import Lead
+from app.models import FakeLead
 
-def configure_database(app, db):
-    """Manages database connection inside a context."""
-
-    @app.before_first_request
-    def initialize_database():
-        """Create sql tables for our data models."""
-        db.create_all()  
-
-    @app.teardown_request
-    def shutdown_session(exception=None):
-        """Remove on close connection."""
-        db.session.remove()
+def verify_lead_is_populated(db) -> bool:
+    """Verify if lead is populated already"""
+    response = db.engine.execute(" SELECT * FROM lead LIMIT 1")
+    return not response.fetchall()
 
 def populate_database(db):
     """Populate lead table."""
@@ -36,21 +30,3 @@ def populate_database(db):
             f"'{lead['expectativa'] + '00:00:00'}')"
         )
         db.engine.execute(query)
-
-    '''
-    Best format that is alligned with SQLAlchemy,
-    if circular import is treated in the future:
-
-        new_lead = app.models.LeadModel(
-            nome=lead_data['nome'],
-            email=lead_data['email'],
-            telefone=lead_data['telefone'],
-            tipo=lead_data['tipo'],
-            etapa=lead_data['etapa'],
-            data=lead_data['data'],
-            expectativa=lead_data['expectativa']
-        )
-        leads_objects.append(new_lead)
-    db.session.add_all(leads_objects)
-    db.session.commit()
-    '''

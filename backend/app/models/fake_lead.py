@@ -1,5 +1,4 @@
-from app import db
-
+from .rdb import db
 
 class FakeLead(db.Model):
 
