@@ -30,7 +30,13 @@ function uniqByKeepFirst(array, key) {
       return seen.has(k) ? false : seen.add(k);
   });
 }
-
+function uniqByKeepLast(a, key) {
+  return [
+      ...new Map(
+          a.map(x => [key(x), x])
+      ).values()
+  ]
+}
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -72,7 +78,7 @@ export default function VerticalTabs(props) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const unique = uniqByKeepFirst(props.leads,it => it.email);
+  const unique = uniqByKeepLast(props.leads,it => it.email);
 
   return (
     <Box

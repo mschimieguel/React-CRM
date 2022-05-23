@@ -20,11 +20,14 @@ export default function MediaCard(props) {
   const month =  props.data.toString().slice(5,7);
   const day =  props.data.toString().slice(8,10);
   const mydate = " "+ day + "/" + month + "/" + year + " ";
+  const backendDate = ""+ year + "-" + month + "-" + day;
+
 
   const ExpectYear =  props.dataFinal.toString().slice(0,4);
   const ExpectMonth =  props.dataFinal.toString().slice(5,7);
   const ExpectDay =  props.dataFinal.toString().slice(8,10);
   const myExpectDate = " "+ ExpectDay + "/" + ExpectMonth + "/" + ExpectYear + " ";
+  const backendExpectDate = ""+ ExpectYear + "-" + ExpectMonth + "-" + ExpectDay;
  
   
  
@@ -111,8 +114,9 @@ export default function MediaCard(props) {
             telefone={props.telefone}
             tipo={props.tipo}
             etapa={props.etapa}
-            data={props.data}
-            dataFinal={props.dataFinal}
+            data={backendDate}
+            dataFinal={backendExpectDate}
+
             onChangeLead={ChangedLeadHandler}
           />
         </CardActions>

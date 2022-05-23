@@ -30,7 +30,7 @@ def retrieve_all_leads():
 
 def js_to_py_datetime(str_datetime: str):
     str_datetime = str_datetime.replace('.000Z', '')
-    return datetime.strptime(str_datetime, '%Y-%m-%dT%H:%M:%S')
+    return datetime.strptime(str_datetime, '%Y-%m-%d')
 
 @lead.route('/lead/', methods=['POST'])
 def create_lead():
