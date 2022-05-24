@@ -68,7 +68,7 @@ export default function FormAdd(props) {
       <input
         type="text"
         value={name}
-        placeholder={props.nome}
+        placeholder='Nome do Lead'
         onChange={(e) => setName(e.target.value)}
       />
       <label for="fname">E-mail</label>
@@ -102,7 +102,7 @@ export default function FormAdd(props) {
       <label for="fname">Tipo</label>
       <div>
         <input type="radio" value="Pessoa" id="Pessoa" name="drone" checked/>
-        <label for="html">Pessoa   </label>
+        <label for="html">Pessoa </label>
         <input type="radio" value="Empresa" id="Empresa" name="drone" />
         <label for="html">Empresa</label>
       </div>
