@@ -12,8 +12,8 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
-  height: 800,
+  width: 600,
+  height: 900,
   bgcolor: "background.paper",
   boxShadow: 24,
   radius: 20,
@@ -61,7 +61,7 @@ export default function BasicModal(props) {
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             Para adicionar leads rapidamente, clique no botão Adicionar lead na
             caixa de entrada de leads. Um lead sempre precisará estar vinculado
-            a uma pessoa ou empresa
+            a uma pessoa ou empresa.
             
           
           </Typography>

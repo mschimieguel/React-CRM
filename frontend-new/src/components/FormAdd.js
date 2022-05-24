@@ -98,11 +98,11 @@ export default function FormAdd(props) {
       <label for="fname">Tipo</label>
       <div>
         <input type="radio" value="Pessoa" id="Pessoa" name="drone" checked/>
-        <label for="html">Pessoa</label>
+        <label for="html">Pessoa   </label>
         <input type="radio" value="Empresa" id="Empresa" name="drone" />
         <label for="html">Empresa</label>
       </div>
-
+      <br />
       <button className={styles.btn} type="submit">
         Criar
       </button>
