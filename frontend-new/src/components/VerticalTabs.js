@@ -96,7 +96,8 @@ export default function VerticalTabs(props) {
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: "divider", width:200, backgroundColor: "#ffffff" }}
+        width={'500px'}
+        sx={{ borderRight: 1, borderColor: "divider", width:"fixed", backgroundColor: "#ffffff" }}
       >
         <Tab icon={<HomeIcon />} iconPosition="start" label="HOME" {...a11yProps(0)} />
         <Tab icon={<BackupTableIcon />} iconPosition="start"  label="OVERVIEW" {...a11yProps(1)} />
@@ -108,9 +109,11 @@ export default function VerticalTabs(props) {
         {/* <Tab label="Item Six" {...a11yProps(5)} />
         <Tab label="Item Seven" {...a11yProps(6)} /> */}
       </Tabs>
-      <TabPanel value={value} index={0}>
+      <TabPanel value={value} index={0} >
         <Home />
       </TabPanel>
+
+
       <TabPanel value={value} index={1}>
         <Overview />
       </TabPanel>
