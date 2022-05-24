@@ -3,6 +3,10 @@ import TextField from "@mui/material/TextField";
 import styles from "./FormAdd.module.css";
 
 export default function FormAdd(props) {
+  function refresh(){
+    props.changeTab(2)
+    props.refreshCard()
+  }
   const [name, setName] = useState(props.nome);
   const [email, setEmail] = useState(props.email);
   const [telefone, setTelefone] = useState(props.telefone);
@@ -103,7 +107,7 @@ export default function FormAdd(props) {
         <label for="html">Empresa</label>
       </div>
       <br />
-      <button onClick={props.refreshCard} className={styles.btn} type="submit">
+      <button onClick={refresh} className={styles.btn} type="submit">
         Criar
       </button>
 

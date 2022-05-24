@@ -77,7 +77,7 @@ export default function BasicModal(props) {
             data={props.data}
             expectativa={props.dataFinal}
             refreshCard={props.refreshCard}
-            
+            changeTab={props.changeTab}
           />
 
           {/*

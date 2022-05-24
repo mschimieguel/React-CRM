@@ -73,7 +73,7 @@ function a11yProps(index) {
 }
 
 export default function VerticalTabs(props) {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(2);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -128,6 +128,8 @@ export default function VerticalTabs(props) {
             data={cliente.data}
             dataFinal={cliente.expectativa}
             refreshCard={props.refreshCard}
+            changeTab={setValue}
+            
             
           />         
         ))}
@@ -145,6 +147,7 @@ export default function VerticalTabs(props) {
             data={cliente.data}
             dataFinal={cliente.expectativa}
             refreshCard={props.refreshCard}
+            changeTab={setValue}
           />         
         ))}
       </TabPanel>
@@ -161,6 +164,7 @@ export default function VerticalTabs(props) {
             data={cliente.data}
             dataFinal={cliente.expectativa}
             refreshCard={props.refreshCard}
+            changeTab={setValue}
           />         
         ))}
       </TabPanel>
@@ -177,6 +181,7 @@ export default function VerticalTabs(props) {
             data={cliente.data}
             dataFinal={cliente.expectativa}
             refreshCard={props.refreshCard}
+            changeTab={setValue}
           />         
         ))}
       </TabPanel>
