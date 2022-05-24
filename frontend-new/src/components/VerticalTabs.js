@@ -86,7 +86,8 @@ export default function VerticalTabs(props) {
         flexGrow: 1,
         bgcolor: "background.paper",
         display: "flex",
-        height: 1260,
+        height: "auto",
+        weight: "auto",
       }}
     >
       <Tabs
@@ -95,7 +96,7 @@ export default function VerticalTabs(props) {
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: "divider" }}
+        sx={{ borderRight: 1, borderColor: "divider", width:200, backgroundColor: "#ffffff" }}
       >
         <Tab icon={<HomeIcon />} iconPosition="start" label="HOME" {...a11yProps(0)} />
         <Tab icon={<BackupTableIcon />} iconPosition="start"  label="OVERVIEW" {...a11yProps(1)} />
