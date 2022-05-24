@@ -4,6 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Container from '@mui/material/Container';
 
 import Home from "../pages/Home";
 import Overview from "../pages/Overview";
@@ -110,7 +111,10 @@ export default function VerticalTabs(props) {
         <Tab label="Item Seven" {...a11yProps(6)} /> */}
       </Tabs>
       <TabPanel value={value} index={0} >
+      <Container fixed> 
+
         <Home />
+        </Container>
       </TabPanel>
 
 

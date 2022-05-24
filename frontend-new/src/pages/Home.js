@@ -22,25 +22,25 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function ResponsiveGrid() {
   return (
         <div>
-          <h1 className={styles.titulo} >Objetivos para a qualidade do software e da interface</h1>
+          <h1 className={styles.descricao} >Objetivos para a qualidade do software e da interface</h1>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
 
-          <Grid item xs={6}  >
+          <Grid item xs  >
             <img className={styles.imgs} src={logo} alt="loading..."/>
 
             <Item className={styles.texto2} >Facilidade de aprendizado <b>(learnability)</b>: quanto tempo e esforço é necessário para que o usuário aprenda a manipular o software;</Item>
           </Grid>
 
 
-          <Grid item xs={6}>
+          <Grid item xs>
           <img className={styles.imgs}  src={logo2} alt="loading..." />
             <Item className={styles.texto2}>Facilidade de recordação <b>(memorability)</b>: quanto tempo e esforço será demandado do usuário para lembrar como manipular o software;</Item>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs>
           <img className={styles.imgs}  src={logo3} alt="loading..." />
             <Item className={styles.texto2}>Eficiência <b>(efficiency)</b>: quanto tempo e esforço é necessário para que o usuário conclua uma tarefa corretamente, com o auxílio do software;</Item>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs>
           <img  className={styles.imgs}  src={logo4} alt="loading..." />
             <Item className={styles.texto2}>Satisfação do usuário <b>(satisfaction)</b>: uma avaliação subjetiva que reflete o efeito sentimental e emocional que a utilização do software estimulou sobre o usuário.</Item>
           </Grid>
