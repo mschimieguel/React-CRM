@@ -103,7 +103,7 @@ export default function FormAdd(props) {
         <label for="html">Empresa</label>
       </div>
       <br />
-      <button className={styles.btn} type="submit">
+      <button onClick={props.refreshCard} className={styles.btn} type="submit">
         Criar
       </button>
 

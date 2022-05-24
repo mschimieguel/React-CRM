@@ -69,7 +69,7 @@ const OldLeads = [
                     </Routes> */}
               <SearchAppBar /> {/* menu horizontal superior */}
 
-              <VerticalTabs leads={this.state.leads} /> {/* menu vertical - opções de navegação */}
+              <VerticalTabs leads={this.state.leads} refreshCard={() => window.location.reload()} /> {/* menu vertical - opções de navegação */}
               {/*<Leads leads={this.state.leads} />*/} 
             </div>
           </Router>

@@ -76,6 +76,7 @@ export default function BasicModal(props) {
             etapa={props.etapa}
             data={props.data}
             expectativa={props.dataFinal}
+            refreshCard={props.refreshCard}
             
           />
 

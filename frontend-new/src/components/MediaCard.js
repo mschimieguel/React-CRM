@@ -116,6 +116,7 @@ export default function MediaCard(props) {
             etapa={props.etapa}
             data={backendDate}
             dataFinal={backendExpectDate}
+            refreshCard={props.refreshCard}
 
             onChangeLead={ChangedLeadHandler}
           />

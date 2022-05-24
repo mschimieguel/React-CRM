@@ -127,6 +127,7 @@ export default function VerticalTabs(props) {
             etapa={cliente.etapa}
             data={cliente.data}
             dataFinal={cliente.expectativa}
+            refreshCard={props.refreshCard}
             
           />         
         ))}
@@ -143,6 +144,7 @@ export default function VerticalTabs(props) {
             etapa={cliente.etapa}
             data={cliente.data}
             dataFinal={cliente.expectativa}
+            refreshCard={props.refreshCard}
           />         
         ))}
       </TabPanel>
@@ -158,6 +160,7 @@ export default function VerticalTabs(props) {
             etapa={cliente.etapa}
             data={cliente.data}
             dataFinal={cliente.expectativa}
+            refreshCard={props.refreshCard}
           />         
         ))}
       </TabPanel>
@@ -173,6 +176,7 @@ export default function VerticalTabs(props) {
             etapa={cliente.etapa}
             data={cliente.data}
             dataFinal={cliente.expectativa}
+            refreshCard={props.refreshCard}
           />         
         ))}
       </TabPanel>
