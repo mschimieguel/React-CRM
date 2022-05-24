@@ -132,7 +132,7 @@ export default function VerticalTabs(props) {
         ))}
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <h1 className={styles.negocio}>NOGOCIAÇÃO</h1>
+        <h1 className={styles.negocio}>NEGOCIAÇÃO</h1>
         {unique.filter((i) => (i.etapa.toString() === "2") ).map((cliente) => (
           <MediaCard 
             key= {cliente.id}
