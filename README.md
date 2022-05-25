@@ -1,4 +1,4 @@
-# Aplicativo CRM simples escrito com React.
+# Aplicativo CRM escrito com React.
 
 #### Recursos:
 - Armazenamento de dados persistente com o banco de dados
@@ -46,11 +46,10 @@
    - [x] Criar endpoint para update do Lead (Breno)
 
 3. Como usuário, quero converter um Lead para Negócios.
-   - [ ] Criar componente para adição do Lead para pesssoa (Matheus)
-   - [ ] Criar componente para edição do Lead para negócio (Klysman)
-   - [ ] Criar sessão para somente empresas (Matheus)
-   - [ ] Criar sessão para somente pessoas (Klysman)
-   - [ ] Criar pagina Home com descrição (Klysman)
+   - [x] Criar componente para adição do Lead para pesssoa ou empresa (Matheus)
+   - [x] Criar sessão para somente empresas (Klysman)
+   - [x] Criar sessão para somente pessoas (Klysman)
+   - [x] Criar pagina Home com descrição (Klysman)
 
 
 
