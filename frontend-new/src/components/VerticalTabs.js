@@ -198,7 +198,7 @@ export default function VerticalTabs(props) {
       <TabPanel value={value} index={3}>
       
       <h1 className={styles.lead} >LEAD</h1>
-      {unique.filter((i) => (i.etapa.toString() === "1") ).filter((i) => (i.tipo.toString() === "Empresa") ).map((cliente) => (
+      {unique.filter((i) => (i.etapa.toString() === "1") ).filter((i) => (i.tipo === "Empresa") ).map((cliente) => (
         
         <MediaCard 
           key={cliente.id}
@@ -218,7 +218,7 @@ export default function VerticalTabs(props) {
     </TabPanel>
     <TabPanel value={value} index={3}>
       <h1 className={styles.negocio}>NEGOCIAÇÃO</h1>
-      {unique.filter((i) => (i.etapa.toString() === "2") ).filter((i) => (i.tipo.toString() === "Empresa") ).map((cliente) => (
+      {unique.filter((i) => (i.etapa.toString() === "2") ).filter((i) => (i.tipo === "Empresa") ).map((cliente) => (
         <MediaCard 
           key= {cliente.id}
           nome= {cliente.nome}
@@ -235,7 +235,7 @@ export default function VerticalTabs(props) {
     </TabPanel>
     <TabPanel value={value} index={3}>
       <h1 className={styles.contrato}>CONTRATO</h1>
-      {unique.filter((i) => (i.etapa.toString() === "3") ).filter((i) => (i.tipo.toString() === "Empresa") ).map((cliente) => (
+      {unique.filter((i) => (i.etapa.toString() === "3") ).filter((i) => (i.tipo === "Empresa") ).map((cliente) => (
         <MediaCard 
           key= {cliente.id}
           nome= {cliente.nome}
@@ -252,7 +252,7 @@ export default function VerticalTabs(props) {
     </TabPanel>
     <TabPanel value={value} index={3}>
       <h1 className={styles.andamento}>EM ANDAMENTO</h1>
-      {unique.filter((i) => (i.etapa.toString() === "4") ).filter((i) => (i.tipo.toString() === "Empresa") ).map((cliente) => (
+      {unique.filter((i) => (i.etapa.toString() === "4") ).filter((i) => (i.tipo === "Empresa") ).map((cliente) => (
         <MediaCard 
           key= {cliente.id}
           nome= {cliente.nome}
@@ -268,10 +268,97 @@ export default function VerticalTabs(props) {
       ))}
     </TabPanel>
 
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <TabPanel value={value} index={4}>
       
-      <TabPanel value={value} index={4}>
-      <Pessoas />
-      </TabPanel>
+      <h1 className={styles.lead} >LEAD</h1>
+      {unique.filter((i) => (i.etapa.toString() === "1") ).filter((i) => (i.tipo === "Pessoa") ).map((cliente) => (
+        
+        <MediaCard 
+          key={cliente.id}
+          nome={cliente.nome}
+          email={cliente.email}
+          telefone={cliente.telefone}
+          tipo= {cliente.tipo}
+          etapa={cliente.etapa}
+          data={cliente.data}
+          dataFinal={cliente.expectativa}
+          refreshCard={props.refreshCard}
+          changeTab={setValue}
+          
+          
+        />         
+      ))}
+    </TabPanel>
+    <TabPanel value={value} index={4}>
+      <h1 className={styles.negocio}>NEGOCIAÇÃO</h1>
+      {unique.filter((i) => (i.etapa.toString() === "2") ).filter((i) => (i.tipo === "Pessoa") ).map((cliente) => (
+        <MediaCard 
+          key= {cliente.id}
+          nome= {cliente.nome}
+          email=  {cliente.email}
+          telefone= {cliente.telefone}
+          tipo= {cliente.tipo}
+          etapa={cliente.etapa}
+          data={cliente.data}
+          dataFinal={cliente.expectativa}
+          refreshCard={props.refreshCard}
+          changeTab={setValue}
+        />         
+      ))}
+    </TabPanel>
+    <TabPanel value={value} index={4}>
+      <h1 className={styles.contrato}>CONTRATO</h1>
+      {unique.filter((i) => (i.etapa.toString() === "3") ).filter((i) => (i.tipo === "Pessoa") ).map((cliente) => (
+        <MediaCard 
+          key= {cliente.id}
+          nome= {cliente.nome}
+          email=  {cliente.email}
+          telefone= {cliente.telefone}
+          tipo= {cliente.tipo}
+          etapa={cliente.etapa}
+          data={cliente.data}
+          dataFinal={cliente.expectativa}
+          refreshCard={props.refreshCard}
+          changeTab={setValue}
+        />         
+      ))}
+    </TabPanel>
+    <TabPanel value={value} index={4}>
+      <h1 className={styles.andamento}>EM ANDAMENTO</h1>
+      {unique.filter((i) => (i.etapa.toString() === "4") ).filter((i) => (i.tipo === "Pessoa") ).map((cliente) => (
+        <MediaCard 
+          key= {cliente.id}
+          nome= {cliente.nome}
+          email=  {cliente.email}
+          telefone= {cliente.telefone}
+          tipo= {cliente.tipo}
+          etapa={cliente.etapa}
+          data={cliente.data}
+          dataFinal={cliente.expectativa}
+          refreshCard={props.refreshCard}
+          changeTab={setValue}
+        />         
+      ))}
+    </TabPanel>
+   
       <TabPanel value={value} index={5}>
       <Calendar />
       </TabPanel>

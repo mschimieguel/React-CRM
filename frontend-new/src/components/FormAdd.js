@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import styles from "./FormAdd.module.css";
 
+
+
+
 export default function FormAdd(props) {
   function refresh(){
     props.changeTab(2)
@@ -12,11 +15,30 @@ export default function FormAdd(props) {
   const [telefone, setTelefone] = useState(props.telefone);
   const [etapa, setEtapa] = useState(props.etapa);
   const [tipo, setTipo] = useState(props.tipo);
+  
 
   const [data, setData] = useState(props.data);
   const [expectativa, setExpectativa] = useState(props.expectativa);
 
   const [message, setMessage] = useState("");
+
+  function radioHandler(){
+    if (tipo === "Pessoa" )
+      setTipo("Empresa");
+    if (tipo === "Empresa" )
+      setTipo("Pessoa");
+    
+}
+
+function inverseTipo(){
+  if (props.tipo === "Pessoa" )
+    return ("Empresa");
+  if (props.tipo === "Empresa" )
+     return ("Pessoa");
+  else
+    return "ERROR_DE_TIPO";
+}
+
 
   let handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,7 +50,7 @@ export default function FormAdd(props) {
           nome: name,
           email: email,
           telefone: telefone,
-          tipo: "Pessoa",
+          tipo: tipo,
           etapa: etapa,
           data: data,
           expectativa: expectativa,
@@ -101,10 +123,10 @@ export default function FormAdd(props) {
 
       <label for="fname">Tipo</label>
       <div>
-        <input type="radio" value="Pessoa" id="Pessoa" name="drone" checked/>
-        <label for="html">Pessoa </label>
-        <input type="radio" value="Empresa" id="Empresa" name="drone" />
-        <label for="html">Empresa</label>
+        <input type="radio" value={props.tipo} id={props.tipo} name="drone" checked="False"/>
+        <label for="html"> {props.tipo} </label>
+        <input type="radio" value={inverseTipo} id={inverseTipo} name="drone" onChange={radioHandler} />
+        <label for="html"> {inverseTipo()}</label>
       </div>
       <br />
       <button onClick={refresh} className={styles.btn} type="submit">
