@@ -111,15 +111,16 @@ export default function VerticalTabs(props) {
         <Tab label="Item Seven" {...a11yProps(6)} /> */}
       </Tabs>
       <TabPanel value={value} index={0} >
-      <Container fixed> 
-
-        <Home />
+      <Container fixed > 
+        <Home  />
         </Container>
       </TabPanel>
 
 
       <TabPanel value={value} index={1}>
+      <Container fixed > 
         <Overview />
+        </Container>
       </TabPanel>
       <TabPanel value={value} index={2}>
       

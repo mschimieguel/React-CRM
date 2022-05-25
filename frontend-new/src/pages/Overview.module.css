@@ -11,11 +11,8 @@
     background-color: #ac7dfd67;
     border-radius: 20px;
     display: fixed;
-    
-    
-    
-}
 
+}
 .descricao2{
     font-size: 1.2rem;
     font-weight: bold;
@@ -33,7 +30,7 @@
 .texto2 {
     width: auto;
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 400;
     line-height: 1.2;
     margin-bottom: 1.5rem;
     color: rgb(59, 59, 59);
