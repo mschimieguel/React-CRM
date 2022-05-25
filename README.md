@@ -1,4 +1,4 @@
-# Aplicativo CRM simples escrito com React.
+# Aplicativo CRM escrito com React.
 
 #### Recursos:
 - Armazenamento de dados persistente com o banco de dados
