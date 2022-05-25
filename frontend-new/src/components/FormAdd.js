@@ -30,15 +30,6 @@ export default function FormAdd(props) {
     
 }
 
-function inverseTipo(){
-  if (props.tipo === "Pessoa" )
-    return ("Empresa");
-  if (props.tipo === "Empresa" )
-     return ("Pessoa");
-  else
-    return "ERROR_DE_TIPO";
-}
-
 
   let handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,7 +41,7 @@ function inverseTipo(){
           nome: name,
           email: email,
           telefone: telefone,
-          tipo: tipo,
+          tipo: "Pessoa",
           etapa: etapa,
           data: data,
           expectativa: expectativa,
@@ -123,10 +114,10 @@ function inverseTipo(){
 
       <label for="fname">Tipo</label>
       <div>
-        <input type="radio" value={props.tipo} id={props.tipo} name="drone" checked="False"/>
-        <label for="html"> {props.tipo} </label>
-        <input type="radio" value={inverseTipo} id={inverseTipo} name="drone" onChange={radioHandler} />
-        <label for="html"> {inverseTipo()}</label>
+        <input type="radio" value="Pessoa" id="Pessoa" name="drone" checked/>
+        <label for="html">Pessoa </label>
+        <input type="radio" value="Empresa" id="Empresa" name="drone" />
+        <label for="html">Empresa</label>
       </div>
       <br />
       <button onClick={refresh} className={styles.btn} type="submit">
