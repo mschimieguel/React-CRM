@@ -103,7 +103,7 @@ export default function FormAdd(props) {
       <select
         for="fname"
         id="Etapa"
-        value={props.etapa}
+        value={etapa}
         onChange={(e) => setEtapa(e.target.value)}
       >
         <option value="1">1</option>
