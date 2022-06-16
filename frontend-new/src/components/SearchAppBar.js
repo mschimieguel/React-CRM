@@ -86,6 +86,7 @@ export default function SearchAppBar(props) {
           <BasicModal
             mode="add"
             id={-1}
+            etapa="1"
             refreshCard={props.refreshCard}
           />
           <Search >
