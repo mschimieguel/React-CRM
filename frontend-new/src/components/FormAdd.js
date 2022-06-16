@@ -10,6 +10,9 @@ export default function FormAdd(props) {
     props.changeTab(2)
     props.refreshCard()
   }
+  
+ 
+ 
   const [name, setName] = useState(props.nome);
   const [email, setEmail] = useState(props.email);
   const [telefone, setTelefone] = useState(props.telefone);
@@ -22,6 +25,10 @@ export default function FormAdd(props) {
 
   const [message, setMessage] = useState("");
 
+
+  
+    
+
   function radioHandler(){
     if (tipo === "Pessoa" )
       setTipo("Empresa");
@@ -33,15 +40,16 @@ export default function FormAdd(props) {
 
   let handleSubmit = async (e) => {
     e.preventDefault();
+    
     try {
       let res = await fetch("http://127.0.0.1:7776/lead/", {
         method: "POST",
         body: JSON.stringify({
-          id: -1,
+          id: props.id,
           nome: name,
           email: email,
           telefone: telefone,
-          tipo: "Pessoa",
+          tipo: "Empresa",
           etapa: etapa,
           data: data,
           expectativa: expectativa,
@@ -104,6 +112,7 @@ export default function FormAdd(props) {
         for="fname"
         id="Etapa"
         value={etapa}
+        defaultValue={props.etapa}
         onChange={(e) => setEtapa(e.target.value)}
       >
         <option value="1">1</option>
@@ -113,11 +122,11 @@ export default function FormAdd(props) {
       </select>
 
       <label for="fname">Tipo</label>
-      <div>
-        <input type="radio" value="Pessoa" id="Pessoa" name="drone" checked/>
-        <label for="html">Pessoa </label>
+      <div onChange={(e) => setTipo(e.target.value)} >
+        <input type="radio" value="Pessoa" id="Pessoa" name="drone" />
+        <label className="Tipo" for="html">Pessoa </label>
         <input type="radio" value="Empresa" id="Empresa" name="drone" />
-        <label for="html">Empresa</label>
+        <label className="Tipo" for="html">Empresa</label>
       </div>
       <br />
       <button onClick={refresh} className={styles.btn} type="submit">

@@ -54,6 +54,10 @@ export default function MediaCard(props) {
         /> */}
         <CardContent>
         <Avatar variant="rounded" src="avatar1.jpg"   />
+        <Typography gutterBottom variant="h5" component="div">
+            ID: {props.id}
+          </Typography>
+
           <Typography gutterBottom variant="h5" component="div">
             {props.nome}
           </Typography>
@@ -107,8 +111,10 @@ export default function MediaCard(props) {
           <Button size="small">Learn More</Button> */}
           <CustomizedDialogs/>
           <BasicModal 
+
             mode="modify"
-            key={props.id}
+            key={props.key}
+            id={props.id}
             nome={props.nome}
             email={props.email}
             telefone={props.telefone}

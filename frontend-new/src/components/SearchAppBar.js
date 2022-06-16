@@ -59,13 +59,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function SearchAppBar() {
+export default function SearchAppBar(props) {
   return (
-    
-    <Box  sx={{ flexGrow: 1 }}>
+
+    <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" >
         <Toolbar className={styles.background} >
-          <IconButton 
+          <IconButton
             size="large"
             edge="start"
             color="inherit"
@@ -73,17 +73,21 @@ export default function SearchAppBar() {
             sx={{ mr: 2 }}
           >
             <DashboardCustomizeIcon />
-            
+
           </IconButton>
-          <Typography 
+          <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            8-CRM 
+            8-CRM
           </Typography>
-          <BasicModal mode="add"/>
+          <BasicModal
+            mode="add"
+            id={-1}
+            refreshCard={props.refreshCard}
+          />
           <Search >
             <SearchIconWrapper>
               <SearchIcon />

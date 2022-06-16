@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import Form from "./Form";
+
 import "./BasicModal.css";
 import FormAdd from "./FormAdd";
 
@@ -67,8 +67,9 @@ export default function BasicModal(props) {
           </Typography>
 
           <FormAdd
-            mode="modify"
-            key={props.id}
+            mode={props.mode}
+            key={props.key}
+            id={props.id}
             nome={props.nome}
             email={props.email}
             telefone={props.telefone}

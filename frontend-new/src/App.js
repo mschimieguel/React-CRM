@@ -67,7 +67,7 @@ const OldLeads = [
                       <Route exact path='/' element={<Home />} />
                       <Route exact path='/Overview' element={<Overview />} />
                     </Routes> */}
-              <SearchAppBar /> {/* menu horizontal superior */}
+              <SearchAppBar refreshCard={() => window.location.reload()}/> {/* menu horizontal superior */}
 
               <VerticalTabs leads={this.state.leads} refreshCard={() => window.location.reload()} /> {/* menu vertical - opções de navegação */}
               {/*<Leads leads={this.state.leads} />*/} 

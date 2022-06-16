@@ -129,6 +129,7 @@ export default function VerticalTabs(props) {
           
           <MediaCard 
             key={cliente.id}
+            id={cliente.id}
             nome={cliente.nome}
             email={cliente.email}
             telefone={cliente.telefone}
@@ -148,6 +149,7 @@ export default function VerticalTabs(props) {
         {unique.filter((i) => (i.etapa.toString() === "2") ).map((cliente) => (
           <MediaCard 
             key= {cliente.id}
+            id={cliente.id}
             nome= {cliente.nome}
             email=  {cliente.email}
             telefone= {cliente.telefone}
@@ -165,6 +167,7 @@ export default function VerticalTabs(props) {
         {unique.filter((i) => (i.etapa.toString() === "3") ).map((cliente) => (
           <MediaCard 
             key= {cliente.id}
+            id={cliente.id}
             nome= {cliente.nome}
             email=  {cliente.email}
             telefone= {cliente.telefone}
@@ -182,6 +185,7 @@ export default function VerticalTabs(props) {
         {unique.filter((i) => (i.etapa.toString() === "4") ).map((cliente) => (
           <MediaCard 
             key= {cliente.id}
+            id={cliente.id}
             nome= {cliente.nome}
             email=  {cliente.email}
             telefone= {cliente.telefone}
@@ -202,6 +206,7 @@ export default function VerticalTabs(props) {
         
         <MediaCard 
           key={cliente.id}
+          id={cliente.id}
           nome={cliente.nome}
           email={cliente.email}
           telefone={cliente.telefone}
@@ -221,6 +226,7 @@ export default function VerticalTabs(props) {
       {unique.filter((i) => (i.etapa.toString() === "2") ).filter((i) => (i.tipo === "Empresa") ).map((cliente) => (
         <MediaCard 
           key= {cliente.id}
+          id={cliente.id}
           nome= {cliente.nome}
           email=  {cliente.email}
           telefone= {cliente.telefone}
@@ -238,6 +244,7 @@ export default function VerticalTabs(props) {
       {unique.filter((i) => (i.etapa.toString() === "3") ).filter((i) => (i.tipo === "Empresa") ).map((cliente) => (
         <MediaCard 
           key= {cliente.id}
+          id={cliente.id}
           nome= {cliente.nome}
           email=  {cliente.email}
           telefone= {cliente.telefone}
@@ -255,6 +262,7 @@ export default function VerticalTabs(props) {
       {unique.filter((i) => (i.etapa.toString() === "4") ).filter((i) => (i.tipo === "Empresa") ).map((cliente) => (
         <MediaCard 
           key= {cliente.id}
+          id={cliente.id}
           nome= {cliente.nome}
           email=  {cliente.email}
           telefone= {cliente.telefone}
