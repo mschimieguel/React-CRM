@@ -49,7 +49,7 @@ export default function FormAdd(props) {
           nome: name,
           email: email,
           telefone: telefone,
-          tipo: "Empresa",
+          tipo: tipo,
           etapa: etapa,
           data: data,
           expectativa: expectativa,
@@ -123,9 +123,9 @@ export default function FormAdd(props) {
 
       <label for="fname">Tipo</label>
       <div onChange={(e) => setTipo(e.target.value)} >
-        <input type="radio" value="Pessoa" id="Pessoa" name="drone" />
+        <input type="radio" value="Pessoa" id="Pessoa" name="drone" checked={ tipo == "Pessoa"? true: false}/>
         <label className="Tipo" for="html">Pessoa </label>
-        <input type="radio" value="Empresa" id="Empresa" name="drone" />
+        <input type="radio" value="Empresa" id="Empresa" name="drone" checked={ tipo == "Empresa"? true: false}/>
         <label className="Tipo" for="html">Empresa</label>
       </div>
       <br />
