@@ -7,7 +7,9 @@ import styles from "./FormAdd.module.css";
 
 export default function FormAdd(props) {
   function refresh(){
-    props.changeTab(2)
+    if (props.mode.toString() === "modify"){
+      props.changeTab(2)
+    } 
     props.refreshCard()
   }
   
