@@ -1,15 +1,13 @@
 import * as React from "react";
-import PropTypes from "prop-types";
+
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
+
 import Box from "@mui/material/Box";
 import Container from '@mui/material/Container';
 
 import Home from "../pages/Home";
 import Overview from "../pages/Overview";
-import Empresas from "../pages/Empresas";
-import Pessoas from "../pages/Pessoas";
 import Calendar from "../pages/Calendar";
 
 import HomeIcon from '@mui/icons-material/Home';
@@ -20,7 +18,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 import MediaCard from "./MediaCard";
-
+import TabPanel from "./TabPanel"
 import styles from "./VerticalTabs.module.css";
 
 
@@ -38,33 +36,6 @@ function uniqByKeepLast(a, key) {
       ).values()
   ]
 }
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
- 
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
 
 function a11yProps(index) {
   return {
@@ -275,24 +246,6 @@ export default function VerticalTabs(props) {
         />         
       ))}
     </TabPanel>
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <TabPanel value={value} index={4}>
       
