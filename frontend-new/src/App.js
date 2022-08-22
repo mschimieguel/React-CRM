@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import VerticalTabs from "./components/VerticalTabs";
 import SearchAppBar from "./components/SearchAppBar";
 
-import Home from "./pages/Home";
+import Calendar from "./pages/Calendar";
 import Overview from "./pages/Overview";
 
 const OldLeads = [
@@ -58,7 +58,7 @@ const OldLeads = [
       }
       render() {
         return (
-          <Router>
+         
             <div>
               
               {/* <Link to='/'>Home</Link>
@@ -67,12 +67,13 @@ const OldLeads = [
                       <Route exact path='/' element={<Home />} />
                       <Route exact path='/Overview' element={<Overview />} />
                     </Routes> */}
-              <SearchAppBar refreshCard={() => window.location.reload()}/> {/* menu horizontal superior */}
+              <SearchAppBar /> {/* menu horizontal superior */}
 
-              <VerticalTabs leads={this.state.leads} refreshCard={() => window.location.reload()} /> {/* menu vertical - opções de navegação */}
+              <VerticalTabs leads={this.state.leads}  /> {/* menu vertical - opções de navegação */}
               {/*<Leads leads={this.state.leads} />*/} 
+             
             </div>
-          </Router>
+         
         )
       }
  }

@@ -87,7 +87,7 @@ export default function SearchAppBar(props) {
             mode="add"
             id={-1}
             etapa="1"
-            refreshCard={props.refreshCard}
+            
           />
           <Search >
             <SearchIconWrapper>

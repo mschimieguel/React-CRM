@@ -6,15 +6,7 @@ import styles from "./FormAdd.module.css";
 
 
 export default function FormAdd(props) {
-  function refresh(){
-    if (props.mode.toString() === "modify"){
-      props.changeTab(2)
-    } 
-    props.refreshCard()
-  }
-  
- 
- 
+
   const [name, setName] = useState(props.nome);
   const [email, setEmail] = useState(props.email);
   const [telefone, setTelefone] = useState(props.telefone);
@@ -63,6 +55,7 @@ export default function FormAdd(props) {
         setEmail("");
         setTelefone("");
         setMessage("PROJETO adicionado com sucesso!");
+        props.handleClose();
       } else {
         setMessage("Some error occured");
       }
@@ -131,7 +124,7 @@ export default function FormAdd(props) {
         <label className="Tipo" for="html">Empresa</label>
       </div>
       <br />
-      <button onClick={refresh} className={styles.btn} type="submit">
+      <button className={styles.btn} type="submit">
         Criar
       </button>
 
