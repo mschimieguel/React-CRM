@@ -1,0 +1,20 @@
+.BottonColor {
+    background-color: #53caeb;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #fff;
+
+}
+
+.BottonColor:hover {
+    background-color: #062831;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #fff;
+}
+
+.h1 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}

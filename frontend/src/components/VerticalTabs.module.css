@@ -1,0 +1,63 @@
+.lead {
+    color: rgb(49, 49, 49);
+    
+    font-size: 1.8rem;
+    display:fixed;
+    font-weight: 500;
+    font-family: 'IBM Plex Mono';
+    text-transform: uppercase;
+    text-align: left;
+    background: #b983ff9a 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    padding-left: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+.negocio {
+    color: rgb(49, 49, 49);
+    font-size: 1.8rem;
+    display:fixed;
+    font-weight: 500;
+    font-family: 'IBM Plex Mono';
+    text-transform: uppercase;
+    text-align: left;
+    background: #94B3FD 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    padding-left: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contrato {
+    color: rgb(49, 49, 49);
+    font-size: 1.8rem;
+    display:fixed;
+    font-weight: 500;
+    font-family: 'IBM Plex Mono';
+    text-transform: uppercase;
+    text-align: left;
+    background: #94DAFF 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    padding-left: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.andamento {
+    color: rgb(49, 49, 49);
+    font-size: 1.8rem;
+    display:fixed;
+    font-weight: 500;
+    font-family: 'IBM Plex Mono';
+    text-transform: uppercase;
+    text-align: left;
+    background: #99FEFF 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    padding-left: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
