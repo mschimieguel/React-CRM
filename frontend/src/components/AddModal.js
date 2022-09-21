@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 
 import "./BasicModal.css";
-import FormAdd from "./FormAdd";
+import AddForm  from "./AddForm";
 
 const style = {
   position: "absolute",
@@ -62,17 +62,38 @@ export default function BasicModal(props) {
             Para adicionar leads rapidamente, clique no botão Adicionar lead na
             caixa de entrada de leads. Um lead sempre precisará estar vinculado
             a uma pessoa ou empresa.
+            
+          
           </Typography>
 
-          <FormAdd
+          <AddForm
             mode={props.mode}
             key={props.key}
             id={props.id}
-            cliente={props.cliente}
+            nome={props.nome}
+            email={props.email}
+            telefone={props.telefone}
+            tipo={props.tipo}
+            etapa={props.etapa}
             data={props.data}
             expectativa={props.dataFinal}
-            handleClose={handleClose}            
+            refreshCard={props.refreshCard}
+            changeTab={props.changeTab}
           />
+
+          {/*
+         <Form
+            ClassName="Form"
+            key={props.id}
+            nome={props.nome}
+            email={props.email}
+            telefone={props.telefone}
+            tipo={props.tipo}
+            etapa={props.etapa}
+            data={props.data}
+            dataFinal={props.dataFinal}
+            onSaveChagedLead = {saveChangedLeadHandler}
+      />*/}
         </Box>
       </Modal>
     </div>

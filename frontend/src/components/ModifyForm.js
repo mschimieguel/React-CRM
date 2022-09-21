@@ -5,7 +5,7 @@ import styles from "./FormAdd.module.css";
 
 
 
-export default function FormAdd(props) {
+export default function ModifyForm(props) {
 
   const [name, setName] = useState(props.cliente.nome);
   const [email, setEmail] = useState(props.cliente.email);
@@ -18,6 +18,18 @@ export default function FormAdd(props) {
   const [expectativa, setExpectativa] = useState(props.expectativa);
 
   const [message, setMessage] = useState("");
+
+
+  
+    
+
+  function radioHandler(){
+    if (tipo === "Pessoa" )
+      setTipo("Empresa");
+    if (tipo === "Empresa" )
+      setTipo("Pessoa");
+    
+}
 
 
   let handleSubmit = async (e) => {
@@ -43,7 +55,6 @@ export default function FormAdd(props) {
         setEmail("");
         setTelefone("");
         setMessage("PROJETO adicionado com sucesso!");
-        props.handleClose();
       } else {
         setMessage("Some error occured");
       }
@@ -105,10 +116,10 @@ export default function FormAdd(props) {
       </select>
 
       <label for="fname">Tipo</label>
-      <div  >
-        <input type="radio" value="Pessoa" id="Pessoa" name="drone" onChange={(e) => setTipo(e.target.value)} checked={ tipo == "Pessoa"? true: false  }/>
+      <div onChange={(e) => setTipo(e.target.value)} >
+        <input type="radio" value="Pessoa" id="Pessoa" name="drone" checked={ tipo == "Pessoa"? true: false}/>
         <label className="Tipo" for="html">Pessoa </label>
-        <input type="radio" value="Empresa" id="Empresa" name="drone" onChange={(e) => setTipo(e.target.value)} checked={ tipo == "Empresa"? true: false}/>
+        <input type="radio" value="Empresa" id="Empresa" name="drone" checked={ tipo == "Empresa"? true: false}/>
         <label className="Tipo" for="html">Empresa</label>
       </div>
       <br />

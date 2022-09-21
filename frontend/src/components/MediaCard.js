@@ -3,7 +3,7 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import BasicModal from "./BasicModal";
+import ModifyModal from "./ModifyModal";
 
 import Avatar from "@mui/material/Avatar";
 
@@ -66,7 +66,7 @@ export default function MediaCard(props) {
         </CardContent>
         <CardActions>
           <CustomizedDialogs />
-          <BasicModal
+          <ModifyModal
             mode="modify"
             key={props.cliente.key}
             id={props.cliente.id}
@@ -74,7 +74,7 @@ export default function MediaCard(props) {
            
             data={backendDate}
             dataFinal={backendExpectDate}
-            Modificacao={props.Modificacao}
+            
             onChangeLead={ChangedLeadHandler}
           />
         </CardActions>

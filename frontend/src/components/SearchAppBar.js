@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import ImageAvatars from './ImageAvatars';
-import BasicModal from './BasicModal';
+import AddModal from './AddModal';
 
 import styles from './SearchAppBar.module.css';
 
@@ -80,7 +80,7 @@ export default function SearchAppBar(props) {
           >
             8-CRM
           </Typography>
-          <BasicModal
+          <AddModal
             mode="add"
             id={-1}
             etapa="1"
