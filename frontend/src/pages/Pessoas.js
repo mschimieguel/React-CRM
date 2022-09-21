@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import MediaCard from "./MediaCard";
+import MediaCard from "../components/MediaCard";
 import Box from "@mui/material/Box";
 
-import styles from "./VerticalTabs.module.css";
+import styles from "../nav/VerticalTabs.module.css";
 
 function Pessoas() {
   console.log("Renderizou");

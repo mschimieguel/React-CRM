@@ -7,8 +7,8 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-import ImageAvatars from './ImageAvatars';
-import AddModal from './AddModal';
+import ImageAvatars from '../components/ImageAvatars';
+import AddModal from '../components/AddModal';
 
 import styles from './SearchAppBar.module.css';
 

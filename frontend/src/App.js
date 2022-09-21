@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import VerticalTabs from "./components/VerticalTabs";
-import SearchAppBar from "./components/SearchAppBar";
+import VerticalTabs from "./nav/VerticalTabs";
+import SearchAppBar from "./nav/SearchAppBar";
 
 function  App() {
 

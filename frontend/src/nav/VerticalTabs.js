@@ -17,10 +17,12 @@ import BusinessIcon from "@mui/icons-material/Business";
 import PeopleIcon from "@mui/icons-material/People";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
-import TabPanel from "./TabPanel";
-import Projetos from "./Projetos";
-import Empresas from "./Empresas";
-import Pessoas from "./Pessoas";
+import TabPanel from "../nav/TabPanel";
+
+
+import Projetos from "../pages/Projetos";
+import Empresas from "../pages/Empresas";
+import Pessoas from "../pages/Pessoas";
 
 
 function uniqByKeepFirst(array, key) {
