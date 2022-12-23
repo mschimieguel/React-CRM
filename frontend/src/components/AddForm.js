@@ -5,15 +5,7 @@ import styles from "./FormAdd.module.css";
 
 
 export default function FormAdd(props) {
-  function refresh(){
-    if (props.mode.toString() === "modify"){
-      props.changeTab(2)
-    } 
-    props.refreshCard()
-  }
-  
- 
- 
+
   const [name, setName] = useState(props.nome);
   const [email, setEmail] = useState(props.email);
   const [telefone, setTelefone] = useState(props.telefone);
@@ -68,24 +60,26 @@ export default function FormAdd(props) {
     } catch (err) {
       console.log(err);
     }
+    props.onClose();
+    props.refreshCard();
   };
 
   return (
     <form className={styles.form_control} onSubmit={handleSubmit}>
-      <label for="fname">Data</label>
+      <label htmlFor="fname">Data</label>
       <input
         type="date"
         value={data}
         onChange={(e) => setData(e.target.value)}
       />
-      <label for="fname">Expectativa</label>
+      <label htmlFor="fname">Expectativa</label>
       <input
         type="date"
         value={expectativa}
         onChange={(e) => setExpectativa(e.target.value)}
       />
 
-      <label for="fname">Nome do Lead</label>
+      <label htmlFor="fname">Nome do Lead</label>
 
       <input
         type="text"
@@ -93,14 +87,14 @@ export default function FormAdd(props) {
         placeholder='Nome do Lead'
         onChange={(e) => setName(e.target.value)}
       />
-      <label for="fname">E-mail</label>
+      <label htmlFor="fname">E-mail</label>
       <input
         type="text"
         value={email}
         placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
       />
-      <label for="fname">Telefone</label>
+      <label htmlFor="fname">Telefone</label>
       <input
         type="text"
         value={telefone}
@@ -108,7 +102,7 @@ export default function FormAdd(props) {
         placeholder="Mobile Number"
         onChange={(e) => setTelefone(e.target.value)}
       />
-      <label for="fname">Etapa</label>
+      <label htmlFor="fname">Etapa</label>
       <select
         for="fname"
         id="Etapa"
@@ -122,7 +116,7 @@ export default function FormAdd(props) {
         <option value="4">4</option>
       </select>
 
-      <label for="fname">Tipo</label>
+      <label htmlFor="fname">Tipo</label>
       <div onChange={(e) => setTipo(e.target.value)} >
         <input type="radio" value="Pessoa" id="Pessoa" name="drone" checked={ tipo == "Pessoa"? true: false}/>
         <label className="Tipo" for="html">Pessoa </label>
@@ -130,7 +124,7 @@ export default function FormAdd(props) {
         <label className="Tipo" for="html">Empresa</label>
       </div>
       <br />
-      <button onClick={refresh} className={styles.btn} type="submit">
+      <button  className={styles.btn} type="submit">
         Criar
       </button>
 

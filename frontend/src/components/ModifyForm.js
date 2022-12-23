@@ -19,7 +19,10 @@ export default function ModifyForm(props) {
 
   const [message, setMessage] = useState("");
 
-
+  function refresh(){
+    //props.refreshCard();
+    //props.onClose();
+  }
   
     
 
@@ -52,7 +55,7 @@ export default function ModifyForm(props) {
       let resJson = await res.json();
       if (res.status === 200) {
         setName("");
-        setEmail("");
+        setEmail(""); 
         setTelefone("");
         setMessage("PROJETO adicionado com sucesso!");
       } else {
@@ -61,24 +64,26 @@ export default function ModifyForm(props) {
     } catch (err) {
       console.log(err);
     }
+    props.onClose();
+    props.refreshCard();
   };
 
   return (
     <form className={styles.form_control} onSubmit={handleSubmit}>
-      <label for="fname">Data</label>
+      <label htmlFor="fname">Data</label>
       <input
         type="date"
         value={data}
         onChange={(e) => setData(e.target.value)}
       />
-      <label for="fname">Expectativa</label>
+      <label htmlFor="fname">Expectativa</label>
       <input
         type="date"
         value={expectativa}
         onChange={(e) => setExpectativa(e.target.value)}
       />
 
-      <label for="fname">Nome do Lead</label>
+      <label htmlFor="fname">Nome do Lead</label>
 
       <input
         type="text"
@@ -86,14 +91,14 @@ export default function ModifyForm(props) {
         placeholder='Nome do Lead'
         onChange={(e) => setName(e.target.value)}
       />
-      <label for="fname">E-mail</label>
+      <label htmlFor="fname">E-mail</label>
       <input
         type="text"
         value={email}
         placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
       />
-      <label for="fname">Telefone</label>
+      <label htmlFor="fname">Telefone</label>
       <input
         type="text"
         value={telefone}
@@ -101,9 +106,9 @@ export default function ModifyForm(props) {
         placeholder="Mobile Number"
         onChange={(e) => setTelefone(e.target.value)}
       />
-      <label for="fname">Etapa</label>
+      <label htmlFor="fname">Etapa</label>
       <select
-        for="fname"
+        htmlFor="fname"
         id="Etapa"
         value={etapa}
         defaultValue={props.etapa}
@@ -115,15 +120,15 @@ export default function ModifyForm(props) {
         <option value="4">4</option>
       </select>
 
-      <label for="fname">Tipo</label>
+      <label htmlFor="fname">Tipo</label>
       <div onChange={(e) => setTipo(e.target.value)} >
-        <input type="radio" value="Pessoa" id="Pessoa" name="drone" checked={ tipo == "Pessoa"? true: false}/>
-        <label className="Tipo" for="html">Pessoa </label>
-        <input type="radio" value="Empresa" id="Empresa" name="drone" checked={ tipo == "Empresa"? true: false}/>
-        <label className="Tipo" for="html">Empresa</label>
+        <input type="radio" value="Pessoa" id="Pessoa" name="drone" defaultChecked={ tipo == "Pessoa"? true: false}/>
+        <label className="Tipo" htmlFor="html">Pessoa </label>
+        <input type="radio" value="Empresa" id="Empresa" name="drone" defaultChecked={ tipo == "Empresa"? true: false}/>
+        <label className="Tipo" htmlFor="html">Empresa</label>
       </div>
       <br />
-      <button className={styles.btn} type="submit">
+      <button className={styles.btn} onClick={refresh}  type="submit">
         Criar
       </button>
 

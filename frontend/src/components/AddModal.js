@@ -79,6 +79,7 @@ export default function BasicModal(props) {
             expectativa={props.dataFinal}
             refreshCard={props.refreshCard}
             changeTab={props.changeTab}
+            onClose={handleClose}
           />
 
           {/*
