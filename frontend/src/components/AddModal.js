@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 
 import "./BasicModal.css";
-import FormAdd from "./FormAdd";
+import AddForm  from "./AddForm";
 
 const style = {
   position: "absolute",
@@ -66,7 +66,7 @@ export default function BasicModal(props) {
           
           </Typography>
 
-          <FormAdd
+          <AddForm
             mode={props.mode}
             key={props.key}
             id={props.id}
@@ -79,6 +79,7 @@ export default function BasicModal(props) {
             expectativa={props.dataFinal}
             refreshCard={props.refreshCard}
             changeTab={props.changeTab}
+            onClose={handleClose}
           />
 
           {/*

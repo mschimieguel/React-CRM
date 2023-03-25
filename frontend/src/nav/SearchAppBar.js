@@ -6,12 +6,9 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import ImageAvatars from './ImageAvatars';
-import ContainedButtons from './ContainedButtons';
-import BasicModal from './BasicModal';
-import Container from '@mui/material/Container';
+import ImageAvatars from '../components/ImageAvatars';
+import AddModal from '../components/AddModal';
 
 import styles from './SearchAppBar.module.css';
 
@@ -83,11 +80,11 @@ export default function SearchAppBar(props) {
           >
             8-CRM
           </Typography>
-          <BasicModal
+          <AddModal
             mode="add"
             id={-1}
             etapa="1"
-            refreshCard={props.refreshCard}
+            
           />
           <Search >
             <SearchIconWrapper>

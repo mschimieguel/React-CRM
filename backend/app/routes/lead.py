@@ -28,6 +28,29 @@ def retrieve_all_leads():
     result = models.Lead.query.all()
     return LeadSchema(many=True).jsonify(result), 200
 
+@lead.route('/lead/empresa', methods=['GET'])
+def retrieve_empresa_leads():
+    result = models.Lead.query.filter_by(tipo='Empresa' ).all()
+    return LeadSchema(many=True).jsonify(result), 200
+
+
+@lead.route('/lead/pessoa', methods=['GET'])
+def retrieve_pessoa_leads():
+    result = models.Lead.query.filter_by(tipo='Pessoa' ).all()
+    return LeadSchema(many=True).jsonify(result), 200
+
+@lead.route('/lead/pessoa/etapa=<etapa>', methods=['GET'])
+def retrieve_pessoa_etapa_leads(etapa):
+    result = models.Lead.query.filter_by(tipo='Pessoa' , etapa=etapa).all()
+    return LeadSchema(many=True).jsonify(result), 200
+
+@lead.route('/lead/empresa/etapa=<etapa>', methods=['GET'])
+def retrieve_empresa_etapa_leads(etapa):
+    result = models.Lead.query.filter_by(tipo='Empresa' , etapa=etapa).all()
+    return LeadSchema(many=True).jsonify(result), 200
+
+
+
 def js_to_py_datetime(str_datetime: str):
     str_datetime = str_datetime.replace('.000Z', '')
     return datetime.strptime(str_datetime, '%Y-%m-%d')
