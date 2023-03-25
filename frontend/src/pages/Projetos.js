@@ -7,14 +7,15 @@ import styles from "../nav/VerticalTabs.module.css";
 function Projetos() {
   const [Leads, setLeads] = useState([]);
 
+  async function CarregaLeads() {
+    const resposta = await fetch("http://127.0.0.1:7776/lead/");
+    const LeadsProjetos = await resposta.json();
+    setLeads(LeadsProjetos);
+  }
+
   useEffect(() => {
-    async function CarregaLeads() {
-      const resposta = await fetch("http://127.0.0.1:7776/lead/");
-      const LeadsProjetos = await resposta.json();
-      setLeads(LeadsProjetos);
-    }
     CarregaLeads();
-  }, []);
+  }, [Leads]);
 
   return (
     <Box sx={{ display: "inline-flex" }}>

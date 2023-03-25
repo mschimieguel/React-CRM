@@ -6,15 +6,16 @@ import styles from "../nav/VerticalTabs.module.css";
 
 function Empresas() {
   const [Leads, setLeads] = useState([]);
+  async function CarregaLeads() {
+    const resposta = await fetch("http://127.0.0.1:7776/lead/empresa");
+    const LeadsEmpresas = await resposta.json();
+    setLeads(LeadsEmpresas);
+  }
 
   useEffect(() => {
-    async function CarregaLeads() {
-      const resposta = await fetch("http://127.0.0.1:7776/lead/empresa");
-      const LeadsEmpresas = await resposta.json();
-      setLeads(LeadsEmpresas);
-    }
+   
     CarregaLeads();
-  }, []);
+  }, [Leads]);
 
   return (
     <Box sx={{ display: "inline-flex" }}>

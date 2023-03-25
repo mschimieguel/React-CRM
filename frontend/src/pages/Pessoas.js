@@ -8,15 +8,14 @@ function Pessoas() {
   console.log("Renderizou");
   const [Leads, setLeads] = useState([]);
   const [Modificacao,SetModificacao] = useState(0);
-
+  async function CarregaLeads() {
+    const resposta = await fetch("http://127.0.0.1:7776/lead/pessoa");
+    const Leadspessoas = await resposta.json();
+    setLeads(Leadspessoas);
+  }
   useEffect(() => {
-    async function CarregaLeads() {
-      const resposta = await fetch("http://127.0.0.1:7776/lead/pessoa");
-      const Leadspessoas = await resposta.json();
-      setLeads(Leadspessoas);
-    }
     CarregaLeads();
-  }, []);
+  }, [Leads]);
 
   return (
     <Box sx={{ display: "inline-flex" }}>
