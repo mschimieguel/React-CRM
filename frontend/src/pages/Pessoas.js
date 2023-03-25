@@ -8,14 +8,14 @@ function Pessoas() {
   console.log("Renderizou");
   const [Leads, setLeads] = useState([]);
   const [Modificacao,SetModificacao] = useState(0);
-  async function CarregaLeads() {
+  async function carregaLeads() {
     const resposta = await fetch("http://127.0.0.1:7776/lead/pessoa");
     const Leadspessoas = await resposta.json();
     setLeads(Leadspessoas);
   }
   useEffect(() => {
-    CarregaLeads();
-  }, [Leads]);
+    carregaLeads();
+  }, []);
 
   return (
     <Box sx={{ display: "inline-flex" }}>
@@ -30,6 +30,7 @@ function Pessoas() {
             dataFinal={cliente.expectativa}
             Modificacao={SetModificacao}
             setLeads={setLeads}
+            carregaLeads={carregaLeads}
           />
         ))}
       </div>
@@ -43,6 +44,7 @@ function Pessoas() {
             dataFinal={cliente.expectativa}
             Modificacao={SetModificacao}
             setLeads={setLeads}
+            carregaLeads={carregaLeads}
           />
         ))}
       </div>
@@ -58,6 +60,7 @@ function Pessoas() {
             dataFinal={cliente.expectativa}
             Modificacao={SetModificacao}
             setLeads={setLeads}
+            carregaLeads={carregaLeads}
           />
         ))}
       </div>
@@ -71,6 +74,7 @@ function Pessoas() {
             dataFinal={cliente.expectativa}
             Modificacao={SetModificacao}
             setLeads={setLeads}
+            carregaLeads={carregaLeads}
           />
         ))}
       </div>

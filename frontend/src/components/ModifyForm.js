@@ -64,8 +64,11 @@ export default function ModifyForm(props) {
     } catch (err) {
       console.log(err);
     }
+    await props.carregaLeads();
     props.onClose();
-    props.refreshCard();
+    //  props.refreshCard();
+
+
   };
 
   return (
@@ -129,7 +132,7 @@ export default function ModifyForm(props) {
       </div>
       <br />
       <button className={styles.btn} onClick={refresh}  type="submit">
-        Criar
+        Salvar
       </button>
 
       <div className="message">{message ? <p>{message}</p> : null}</div>

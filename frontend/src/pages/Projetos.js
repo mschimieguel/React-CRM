@@ -7,15 +7,16 @@ import styles from "../nav/VerticalTabs.module.css";
 function Projetos() {
   const [Leads, setLeads] = useState([]);
 
-  async function CarregaLeads() {
+  const carregaLeads = async () => {
     const resposta = await fetch("http://127.0.0.1:7776/lead/");
     const LeadsProjetos = await resposta.json();
     setLeads(LeadsProjetos);
+    console.log("Carrega adsajkdhsudhuashdujshds--------------------------")
   }
 
   useEffect(() => {
-    CarregaLeads();
-  }, [Leads]);
+    carregaLeads();
+  }, []);
 
   return (
     <Box sx={{ display: "inline-flex" }}>
@@ -29,7 +30,7 @@ function Projetos() {
               id={cliente.id}
               cliente={cliente}
               dataFinal={cliente.expectativa}
-              setLeads={setLeads}
+              carregaLeads={carregaLeads}
             />
           ))}
       </div>
@@ -45,6 +46,7 @@ function Projetos() {
               cliente={cliente}
               dataFinal={cliente.expectativa}
               setLeads={setLeads}
+              carregaLeads={carregaLeads}
             />
           ))}
       </div>
@@ -60,6 +62,7 @@ function Projetos() {
               cliente={cliente}
               dataFinal={cliente.expectativa}
               setLeads={setLeads}
+              carregaLeads={carregaLeads}
             />
           ))}
       </div>
@@ -75,6 +78,7 @@ function Projetos() {
               cliente={cliente}
               dataFinal={cliente.expectativa}
               setLeads={setLeads}
+              carregaLeads={carregaLeads}
             />
           ))}
       </div>

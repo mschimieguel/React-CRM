@@ -6,16 +6,15 @@ import styles from "../nav/VerticalTabs.module.css";
 
 function Empresas() {
   const [Leads, setLeads] = useState([]);
-  async function CarregaLeads() {
+  async function carregaLeads() {
     const resposta = await fetch("http://127.0.0.1:7776/lead/empresa");
     const LeadsEmpresas = await resposta.json();
     setLeads(LeadsEmpresas);
   }
 
   useEffect(() => {
-   
-    CarregaLeads();
-  }, [Leads]);
+    carregaLeads();
+  }, []);
 
   return (
     <Box sx={{ display: "inline-flex" }}>
@@ -28,6 +27,7 @@ function Empresas() {
             cliente={cliente}
             dataFinal={cliente.expectativa}
             setLeads={setLeads}
+            carregaLeads={carregaLeads}
           />
         ))}
       </div>
@@ -40,6 +40,7 @@ function Empresas() {
             cliente={cliente}
             dataFinal={cliente.expectativa}
             setLeads={setLeads}
+            carregaLeads={carregaLeads}
           />
         ))}
       </div>
@@ -52,6 +53,7 @@ function Empresas() {
             id={cliente.id}
             cliente={cliente}
             dataFinal={cliente.expectativa}
+            carregaLeads={carregaLeads}
           />
         ))}
       </div>
@@ -64,6 +66,7 @@ function Empresas() {
             cliente={cliente}
             dataFinal={cliente.expectativa}
             setLeads={setLeads}
+            carregaLeads={carregaLeads}
           />
         ))}
       </div>

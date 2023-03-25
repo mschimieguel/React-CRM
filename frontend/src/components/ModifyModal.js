@@ -79,6 +79,7 @@ export default function ModifyModal(props) {
 
             refreshCard={props.refreshCard}
             changeTab={props.changeTab}
+            carregaLeads={props.carregaLeads}
             onClose={handleClose}
           />
 

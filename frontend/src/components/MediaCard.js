@@ -74,7 +74,7 @@ export default function MediaCard(props) {
            
             data={backendDate}
             dataFinal={backendExpectDate}
-            
+            carregaLeads={props.carregaLeads}
             onChangeLead={ChangedLeadHandler}
           />
         </CardActions>
